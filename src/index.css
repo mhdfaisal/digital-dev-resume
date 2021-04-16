@@ -1,0 +1,16 @@
+/*--- normalization ---*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*--- full screen flex layout ---*/
+html,
+body,
+#root {
+	display: flex;
+	flex-direction: column;
+	height: 100% !important;
+	width: 100%;
+}
