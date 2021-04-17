@@ -1,0 +1,38 @@
+/*--- PersonalInfoCard styles ---*/
+
+.person-info__card {
+  max-width: 330px;
+}
+
+/*--- skill tags container - personal-info__card-header-grid styles---*/
+.personal-info__card-header-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+/*--- personal info card avatar styles ---*/
+.personal-info__card-avatar-grid {
+  position: relative;
+  margin-bottom: 4.5rem !important;
+}
+
+.person-info__card .MuiAvatar-root {
+  left: 50%;
+  top: 100%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 10%),
+    0 10px 10px -5px rgb(0 0 0 / 4%);
+}
+
+.personal-info__card-github-grid {
+  margin-top: 1rem !important;
+}
