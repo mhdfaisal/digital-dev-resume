@@ -1,5 +1,11 @@
 import React from 'react';
 
-const App: React.FC = () => <div className="App">My Digital Resume</div>;
+import Home from './pages/Home';
+
+const App: React.FC = () => (
+  <div className="App">
+    <Home />
+  </div>
+);
 
 export default App;
