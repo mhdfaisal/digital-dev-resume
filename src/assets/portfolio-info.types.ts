@@ -16,11 +16,13 @@ export interface IBioData {
 
 /**
  * A skill tag
+ * @description id - a unique identifier for the skill in the list.
  * @description name - name of skill (React / JavaScript).
  * @description backgroundColor - background color for skill badge (yellow, etc).
  * @description fontColor - font color for skill badge (black, white, etc).
  */
 export interface ISkillTag {
+  id: number;
   name: string;
   backgroundColor?: string;
   fontColor?: string;
