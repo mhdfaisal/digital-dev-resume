@@ -18,6 +18,7 @@ const bioData: IBioData = {
     "Whether you're looking to hire an eager self-starter or build your network, I'd love to hear your story.",
 };
 
+// skill tags displayed in Bio section
 const skillTags: SkillTags = [
   { name: 'JavaScript', backgroundColor: 'yellow', fontColor: '#000' },
   { name: 'Es6+', backgroundColor: 'yellow', fontColor: '#000' },
@@ -40,6 +41,7 @@ const skillTags: SkillTags = [
   { name: 'Material Design', backgroundColor: 'blue', fontColor: '#000' },
 ];
 
+// social media links
 const socialMediaLinks: ISocialMediaLinks = {
   github: 'https://github.com/mhdfaisal/',
   gmail: 'fmohd195@gmail.com',
@@ -51,23 +53,94 @@ const socialMediaLinks: ISocialMediaLinks = {
   skype: 'live:7ff348f368d1eda6',
 };
 
+// work experience section
 const workExperiences: WorkExperiences = [
   {
-    role: '',
-    companyName: '',
+    role: 'Remote Front End Developer (React Js)',
+    companyName: 'TrustSearch Ltd, Riga, Latvia',
     companyLogo: '',
-    duration: '',
-    description: '',
+    duration: 'July 2019 - Present',
+    description:
+      'Develop an application where - Internet users check online reputation to websites, but website owners build trustworthiness online',
+    descriptionBullets: [
+      'Building architecture for UI.',
+      'Creating and documenting app-wide design system.',
+      'Promote the usage of React hooks for development.',
+      'Development of Server Side Rendered React App using Next JS framework.',
+      'Development of embedded third party JavaScript widgets',
+      'Development of Shopify apps using Node Js, Next Js and GraphQL',
+      'Development of REST APIs using Node Js',
+      'Web Scraping for reviews aggregation',
+      'Writing Unit and Integration tests using Jest and Enzyme',
+      'Translate designs to front-end code, estimate time and costs, and determine developer requirements and specifications',
+      'Writing cross-browser compatible style rules.',
+      'Reviewed code to validate structures, verify browser, device and browser compatibility.',
+      'Tested customer-facing prototypes before deployment, applying best practice diagnostic techniques to verify usability.',
+      'Tools: JavaScript, React Js, Redux, Next JS, Node Js, Material UI, HTML, React Native, Bootstrap, Testing, Jest, Enzyme, Webpack, Styled JSX',
+    ],
+  },
+  {
+    role: 'Freelance Web Developer',
+    companyName: 'E-Developers World, India',
+    companyLogo: '',
+    duration: 'July 2016 - July 2019',
+    description:
+      'Being a developer at a service based company, experienced working on multiple domains including shipping, finance, e-commerce, etc. Lead the development of a product that automated the processes in the shipping industry to optimise port call operations.',
+    descriptionBullets: [
+      'Simplified shipment business problems using modern technologies',
+      'Developed a reactive Web Application using Meteor Js for shipment port call optimizations',
+      'Reduced numerous man-hours spent manually updating shipment information',
+      'Developed endpoints for sending auto emails and setting up crons',
+      'Developed endpoints and UI for Notifications - snooze and reminder functionalities',
+      'Developed UI and RPCs for generating shipments reports',
+      'Designed and developed dashboard views for different users',
+      'Optimized Meteor mongo subscriptions for efficient querying and reduced size of mini mongo at client level',
+      'Created eye catching and functional digital design concepts across various platforms to strengthen client brand and identity.',
+      'Tested websites and performed troubleshooting prior to deployment.',
+      'Completed full redesigns of existing websites to improve navigation, enhance visuals and strengthen search engine rankings.',
+    ],
+  },
+  {
+    role: 'Part-time Online Web Dev Instructor',
+    companyName: 'TeacherOn',
+    companyLogo: '',
+    duration: 'Oct 2017 - July 2019',
+    description:
+      'Taught people how to code in an efficient way. Helped non-IT background people in learning computer programming and web development. Overall it was a very great experience teaching people belonging to different parts of the world and of different age groups',
+    descriptionBullets: [],
+  },
+  {
+    role: 'Guest Instructor (One day Workshop)',
+    companyName: 'Coding Stallions',
+    companyLogo: '',
+    duration: '27, July 2018',
+    description:
+      'A no-fee one day workshop on web development open to the public and sponsored by Coding Stallions.',
     descriptionBullets: [],
   },
 ];
 
+// education information section
 const educationInfo: EducationInfo = [
   {
-    collegeName: '',
+    collegeName: 'CATHEDRAL SR. SEC. SCHOOL',
     collegeLogo: '',
-    duration: '',
-    description: '',
+    duration: '1999-2013',
+    description: 'INTERMEDIATE',
+    descriptionBullets: [],
+  },
+  {
+    collegeName: 'MCRP UNIVERSITY, BHOPAL',
+    collegeLogo: '',
+    duration: '2014-2017',
+    description: 'BACHELOR OF COMPUTER APPLICATIONS (BCA)',
+    descriptionBullets: [],
+  },
+  {
+    collegeName: 'INTEGRAL UNIVERSITY DDE, LUCKNOW',
+    collegeLogo: '',
+    duration: '2017-2019',
+    description: 'MASTER OF COMPUTER APPLICATIONS (MCA), Distance Ed.',
     descriptionBullets: [],
   },
 ];
