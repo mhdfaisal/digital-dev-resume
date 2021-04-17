@@ -1,13 +1,17 @@
 /**
  * Static data for Bio Section
- * @description About me - paragraphs explaining about my personality.
- * @description Recent challenge solved - A recent challenge solved by me either at work / personal.
- * @description Bio tagline - A tagline to receive leads / DMs.
+ * @description aboutMe - paragraphs explaining about my personality.
+ * @description recentChallengeSolved - A recent challenge solved by me either at work / personal.
+ * @description bioTagLine - A tagline to receive leads / DMs.
+ * @description resumeDownloadLink - A link to download soft copy of resume.
+ * @description meetingSchedulerLink - A link to schedule a meeting (Calendly, etc).
  */
 export interface IBioData {
   aboutMe: string[] | false;
   recentChallengeSolved: string | false;
   bioTagLine: string | false;
+  resumeDownloadLink: string | false;
+  meetingSchedulerLink: string | false;
 }
 
 /**
