@@ -1,0 +1,48 @@
+/*--- NavBar Styles ---*/
+
+.navbar__container {
+  flex-grow: 1;
+}
+.navbar__container-title-grid {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.navbar__container-title {
+  flex: 1;
+  font-family: 'Dancing Script', cursive !important;
+}
+
+.navbar__container-icons-grid {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar__container-icons-grid .MuiIconButton-root {
+  color: #fff !important;
+}
+
+/*--- Media queries ---*/
+
+@media screen and (max-width: 599px) {
+  .navbar__container-title-grid {
+    text-align: center;
+    padding-bottom: 0 !important;
+  }
+  .navbar__container-title {
+    text-align: center;
+    padding-top: 15px;
+  }
+  .navbar__container-icons-grid {
+    padding-top: 4px !important;
+    justify-content: flex-start;
+  }
+  .navbar__container-icon-grid-item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
