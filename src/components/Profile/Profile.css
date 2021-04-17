@@ -1,0 +1,7 @@
+/*--- Profile styles ---*/
+
+.profile__personal-card-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
