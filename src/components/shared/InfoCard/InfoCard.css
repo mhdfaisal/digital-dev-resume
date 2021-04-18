@@ -1,0 +1,20 @@
+/*--- InfoCard styles ---*/
+
+.info__card {
+  display: flex;
+}
+
+.info__card__details {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.info__card__content {
+  flex: 1 0 auto;
+}
+
+.info__card__media {
+  width: 151px;
+  height: 151px;
+}
