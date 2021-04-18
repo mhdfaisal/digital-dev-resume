@@ -26,7 +26,7 @@ const ShowMoreAccordion: React.FC<IShowMoreAccordion> = (props) => {
         aria-controls={`${summary} content`}
         id={`${summary} header`}
       >
-        <Typography>{summary}</Typography>
+        <Typography component="div">{summary}</Typography>
       </AccordionSummary>
       <AccordionDetails>
         <Typography>{children}</Typography>
