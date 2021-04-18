@@ -6,14 +6,15 @@ import Typography from '@material-ui/core/Typography';
 import ShowMoreAccordion from '../ShowMoreAccordion/ShowMoreAccordion';
 
 import './InfoCard.css';
+import EmojiList from '../EmojiList/EmojiList';
 
 interface IInfoCard {
   title?: string;
   subtitle?: string;
   metaData?: string;
   description?: string;
-  descriptionBullets?: [] | false;
-  imageURL?: string;
+  descriptionBullets?: string[] | false;
+  imageURL?: string | false;
 }
 
 /**
@@ -38,31 +39,39 @@ const InfoCard: React.FC<IInfoCard> = (props) => {
       <div className="info__card__details">
         <CardContent classes={{ root: 'info__card__content' }}>
           {title && (
-            <Typography component="h5" variant="h5">
+            <Typography
+              variant="body1"
+              classes={{ body1: 'info__card__title' }}
+              color="primary"
+            >
               {title}
             </Typography>
           )}
           {subtitle && (
             <Typography variant="subtitle1" color="textSecondary">
-              Mac Miller
+              {subtitle}
             </Typography>
           )}
           {metaData && (
             <Typography variant="subtitle1" color="textSecondary">
-              Mac Miller
+              {metaData}
             </Typography>
           )}
           {description && (
             <Typography variant="body2">{description}</Typography>
           )}
         </CardContent>
-        <div>
-          {descriptionBullets && <ShowMoreAccordion summary="Show more" />}
-        </div>
+        {descriptionBullets && (
+          <div className="info__card-description-bullets">
+            <ShowMoreAccordion summary="More">
+              <EmojiList dataArr={descriptionBullets} />
+            </ShowMoreAccordion>
+          </div>
+        )}
       </div>
       {imageURL && (
         <CardMedia
-          image="https://material-ui.com/static/images/cards/live-from-space.jpg"
+          image={imageURL}
           title="Live from space album cover"
           classes={{ root: 'info__card__media' }}
         />

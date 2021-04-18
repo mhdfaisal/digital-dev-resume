@@ -2,6 +2,8 @@
 
 .info__card {
   display: flex;
+  padding: 5px;
+  margin-bottom: 1rem;
 }
 
 .info__card__details {
@@ -14,7 +16,20 @@
   flex: 1 0 auto;
 }
 
+.info__card__title {
+  font-weight: 500 !important;
+}
+
+.info__card-description-bullets {
+  margin-left: 16px;
+}
+
+.info__card-description-bullets .MuiTypography-body1 {
+  font-size: 0.9rem !important;
+}
+
 .info__card__media {
-  width: 151px;
-  height: 151px;
+  width: 100px;
+  height: 100px;
+  content: '';
 }
