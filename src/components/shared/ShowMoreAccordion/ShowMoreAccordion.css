@@ -1,0 +1,19 @@
+.show__more-accordion {
+  box-shadow: none !important;
+}
+
+.show__more-accordion .MuiAccordionSummary-root {
+  display: inline-flex;
+  padding: 0;
+  min-height: 0;
+}
+
+.show__more-accordion .MuiAccordionSummary-expandIcon {
+  padding: 0 0 0 4px;
+  color: inherit;
+}
+
+.show__more-accordion .MuiAccordionDetails-root {
+  padding: 0;
+  margin-bottom: 0.5rem;
+}
