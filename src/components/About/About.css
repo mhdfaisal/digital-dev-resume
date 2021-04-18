@@ -1,0 +1,41 @@
+/*--- About section styles ---*/
+
+.about__container {
+  align-self: stretch;
+  display: flex;
+  height: 100%;
+  padding: 16px;
+  flex-direction: column;
+}
+
+.about__container-heading {
+  margin-bottom: 2rem !important;
+}
+
+.about__container-about-para {
+  margin-bottom: 1.5rem !important;
+}
+
+.about__container-about-para:last-child {
+  margin-bottom: 0 !important;
+}
+
+.about__container-accordion {
+  box-shadow: none !important;
+}
+
+.about__container-accordion .MuiAccordionSummary-root {
+  display: inline-flex;
+  padding: 0;
+  min-height: 0;
+}
+
+.about__container-accordion .MuiAccordionSummary-expandIcon {
+  padding: 0 0 0 4px;
+  color: inherit;
+}
+
+.about__container-accordion .MuiAccordionDetails-root {
+  padding: 0;
+  margin-bottom: 0.5rem;
+}
