@@ -131,25 +131,38 @@ const workExperiences: WorkExperiences = [
 // education information section
 const educationInfo: EducationInfo = [
   {
-    collegeName: 'CATHEDRAL SR. SEC. SCHOOL',
-    collegeLogo: '',
+    collegeName: `CATHEDRAL SR. SEC. SCHOOL`,
+    collegeLogo:
+      'https://material-ui.com/static/images/cards/live-from-space.jpg',
     duration: '1999-2013',
     description: 'INTERMEDIATE',
-    descriptionBullets: [],
+    descriptionBullets: [
+      'Simplified shipment business problems using modern technologies',
+      'Developed a reactive Web Application using Meteor Js for shipment port call optimizations',
+    ],
   },
   {
     collegeName: 'MCRP UNIVERSITY, BHOPAL',
-    collegeLogo: '',
+    collegeLogo:
+      'https://material-ui.com/static/images/cards/live-from-space.jpg',
     duration: '2014-2017',
     description: 'BACHELOR OF COMPUTER APPLICATIONS (BCA)',
-    descriptionBullets: [],
+    descriptionBullets: [
+      'Simplified shipment business problems using modern technologies',
+      'Developed a reactive Web Application using Meteor Js for shipment port call optimizations',
+    ],
   },
   {
     collegeName: 'INTEGRAL UNIVERSITY DDE, LUCKNOW',
-    collegeLogo: '',
+    collegeLogo:
+      'https://material-ui.com/static/images/cards/live-from-space.jpg',
+
     duration: '2017-2019',
     description: 'MASTER OF COMPUTER APPLICATIONS (MCA), Distance Ed.',
-    descriptionBullets: [],
+    descriptionBullets: [
+      'Simplified shipment business problems using modern technologies',
+      'Developed a reactive Web Application using Meteor Js for shipment port call optimizations',
+    ],
   },
 ];
 
