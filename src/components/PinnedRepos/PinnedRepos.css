@@ -1,8 +1,12 @@
+/*--- PinnedRepos Styles ---*/
+
 .pinned__repos {
   margin-top: 2.5rem !important;
+  align-items: stretch;
 }
 
 .pinned__repos-paper-container {
   margin-top: 16px;
   padding: 16px;
+  height: 100%;
 }

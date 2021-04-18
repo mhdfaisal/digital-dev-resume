@@ -3,6 +3,8 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
+import RepoCard from '../shared/RepoCard/RepoCard';
+
 import './PinnedRepos.css';
 
 /**
@@ -18,13 +20,13 @@ const PinnedRepos: React.FC = () => (
       <Paper classes={{ root: 'pinned__repos-paper-container' }}>
         <Grid container spacing={3}>
           <Grid item sm={4}>
-            ASD
+            <RepoCard />
           </Grid>
           <Grid item sm={4}>
-            ZXC
+            <RepoCard />
           </Grid>
           <Grid item sm={4}>
-            ZXC
+            <RepoCard />
           </Grid>
         </Grid>
       </Paper>
