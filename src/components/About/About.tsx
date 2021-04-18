@@ -33,18 +33,20 @@ const About: React.FC = () => {
           </Typography>
         ))}
       <Grid container>
-        <Accordion classes={{ root: 'about__container-accordion' }}>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
-            <Typography>A Recent Challenge Faced</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>{recentChallengeSolved}</Typography>
-          </AccordionDetails>
-        </Accordion>
+        {recentChallengeSolved && (
+          <Accordion classes={{ root: 'about__container-accordion' }}>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Typography>A Recent Challenge Faced</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>{recentChallengeSolved}</Typography>
+            </AccordionDetails>
+          </Accordion>
+        )}
       </Grid>
       <Grid container>
         <Typography variant="h6" gutterBottom>
