@@ -9,16 +9,16 @@ import './ShowMoreAccordion.css';
 
 interface IShowMoreAccordion {
   summary: string;
-  details?: string;
+  children?: React.ReactNode;
 }
 
 /**
  * An expandable and collapsible accordion to show more content.
  * @prop summary - The summary to display on the accordion.
- * @prop details - The details to display in expanded accordion.
+ * @prop children - React node to be displayed under accordion details
  */
 const ShowMoreAccordion: React.FC<IShowMoreAccordion> = (props) => {
-  const { summary, details = '' } = props;
+  const { summary, children } = props;
   return (
     <Accordion classes={{ root: 'show__more-accordion' }}>
       <AccordionSummary
@@ -29,7 +29,7 @@ const ShowMoreAccordion: React.FC<IShowMoreAccordion> = (props) => {
         <Typography>{summary}</Typography>
       </AccordionSummary>
       <AccordionDetails>
-        <Typography>{details}</Typography>
+        <Typography>{children}</Typography>
       </AccordionDetails>
     </Accordion>
   );

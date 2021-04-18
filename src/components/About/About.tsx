@@ -32,10 +32,9 @@ const About: React.FC = () => {
         ))}
       <Grid container>
         {recentChallengeSolved && (
-          <ShowMoreAccordion
-            summary="A Recent Challenge Solved"
-            details={recentChallengeSolved}
-          />
+          <ShowMoreAccordion summary="A Recent Challenge Solved">
+            {recentChallengeSolved}
+          </ShowMoreAccordion>
         )}
       </Grid>
       <Grid container>

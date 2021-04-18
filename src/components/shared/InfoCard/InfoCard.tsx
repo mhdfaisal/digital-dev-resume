@@ -57,9 +57,7 @@ const InfoCard: React.FC<IInfoCard> = (props) => {
           )}
         </CardContent>
         <div>
-          {descriptionBullets && (
-            <ShowMoreAccordion summary="Show more" details="" />
-          )}
+          {descriptionBullets && <ShowMoreAccordion summary="Show more" />}
         </div>
       </div>
       {imageURL && (
