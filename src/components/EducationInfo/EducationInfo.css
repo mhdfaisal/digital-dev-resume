@@ -1,0 +1,10 @@
+/*--- EducationInfo styles ---*/
+
+.education__info-header-icon {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+.education__info-header-icon img {
+  height: 1.5rem !important;
+  width: 1.5rem !important;
+}

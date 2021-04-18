@@ -1,0 +1,10 @@
+/*--- WorkExperience styles ---*/
+
+.work__experience-header-icon {
+  display: inline-block;
+  margin-right: 0.9rem;
+}
+.work__experience-header-icon img {
+  height: 1.5rem !important;
+  width: 1.5rem !important;
+}
