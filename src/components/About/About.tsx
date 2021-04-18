@@ -1,12 +1,10 @@
 import React from 'react';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
-import Accordion from '@material-ui/core/Accordion';
-import AccordionSummary from '@material-ui/core/AccordionSummary';
-import AccordionDetails from '@material-ui/core/AccordionDetails';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Grid from '@material-ui/core/Grid';
 import emoji from 'react-easy-emoji';
+
+import ShowMoreAccordion from '../shared/ShowMoreAccordion/ShowMoreAccordion';
 
 import { bioData, socialMediaLinks } from '../../assets/portfolio-info';
 import './About.css';
@@ -34,18 +32,10 @@ const About: React.FC = () => {
         ))}
       <Grid container>
         {recentChallengeSolved && (
-          <Accordion classes={{ root: 'about__container-accordion' }}>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel1a-content"
-              id="panel1a-header"
-            >
-              <Typography>A Recent Challenge Faced</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>{recentChallengeSolved}</Typography>
-            </AccordionDetails>
-          </Accordion>
+          <ShowMoreAccordion
+            summary="A Recent Challenge Solved"
+            details={recentChallengeSolved}
+          />
         )}
       </Grid>
       <Grid container>
