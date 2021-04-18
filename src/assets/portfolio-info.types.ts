@@ -69,7 +69,7 @@ export interface IWorkExperience {
   companyLogo?: string;
   duration: string;
   description: string;
-  descriptionBullets?: string[];
+  descriptionBullets?: string[] | false;
 }
 
 /**
