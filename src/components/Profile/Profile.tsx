@@ -1,8 +1,8 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
 
 import PersonalInfoCard from '../PersonalInfoCard/PersonalInfoCard';
+import About from '../About/About';
 
 import './Profile.css';
 
@@ -11,11 +11,12 @@ import './Profile.css';
  */
 const Profile: React.FC = () => (
   <Grid container>
-    <Grid item sm={5} classes={{ root: 'profile__personal-card-grid' }}>
+    <Grid item md={1} />
+    <Grid item md={3} classes={{ root: 'profile__personal-card-grid' }}>
       <PersonalInfoCard />
     </Grid>
-    <Grid item sm={7}>
-      <Paper>xs=12 sm=6</Paper>
+    <Grid item md={7} classes={{ root: 'profile__about-card-grid' }}>
+      <About />
     </Grid>
   </Grid>
 );
