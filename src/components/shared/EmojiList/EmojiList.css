@@ -1,0 +1,26 @@
+/*--- Emoji styles ---*/
+
+.emoji__list {
+  display: block;
+}
+
+.emoji__list__item {
+  display: block;
+  margin-bottom: 15px;
+  text-align: left;
+  display: flex;
+}
+
+.emoji__list__item-icon {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.emoji__list__item-icon img {
+  height: 1.2rem !important;
+  width: 1.2rem !important;
+}
+
+.emoji__list__item-text {
+  font-size: 0.9rem;
+}
