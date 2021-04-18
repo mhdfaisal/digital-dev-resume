@@ -96,7 +96,7 @@ export interface ICollege {
   collegeLogo: string | false;
   duration: string;
   description: string;
-  descriptionBullets: string[];
+  descriptionBullets: string[] | false;
 }
 
 /**
