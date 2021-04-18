@@ -4,6 +4,7 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 
 import EducationInfo from '../EducationInfo/EducationInfo';
+import WorkExperience from '../WorkExperience/WorkExperience';
 
 import './EducationAndWork.css';
 
@@ -23,7 +24,7 @@ const EducationAndWork: React.FC = () => (
             <EducationInfo />
           </Grid>
           <Grid item sm={6}>
-            6
+            <WorkExperience />
           </Grid>
         </Grid>
       </Paper>
