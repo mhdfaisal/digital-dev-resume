@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import Header from '../components/Header/Header';
 import Profile from '../components/Profile/Profile';
+import EducationAndWork from '../components/EducationAndWork/EducationAndWork';
 
 /**
  * Link a style sheet to the Home component using the hook pattern.
@@ -27,6 +28,7 @@ const Home: React.FC = () => {
     <Paper elevation={0} className={classes.root}>
       <Header />
       <Profile />
+      <EducationAndWork />
     </Paper>
   );
 };

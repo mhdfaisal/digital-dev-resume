@@ -7,7 +7,7 @@ import About from '../About/About';
 import './Profile.css';
 
 /**
- * Contains personal info and bio data.
+ * A container component to display personal info and bio data.
  */
 const Profile: React.FC = () => (
   <Grid container>
