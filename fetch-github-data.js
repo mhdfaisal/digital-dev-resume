@@ -28,7 +28,7 @@ require('dotenv').config();
   const data = JSON.stringify({
     query: `
 {
-  user(login:"${GITHUB_USERNAME}") { 
+user(login: "mhdfaisal") {
     name
     bio
     url
@@ -36,44 +36,100 @@ require('dotenv').config();
     avatarUrl
     location
     status {
-        emojiHTML
-        message
-      }
+      emojiHTML
+      message
+    }
     company
     pinnedItems(first: 6, types: [REPOSITORY]) {
       totalCount
       edges {
-          node {
-            ... on Repository {
-              name
-              description
-              forkCount
-              stargazers {
-                totalCount
-              }
-              homepageUrl
-              pushedAt
-              openGraphImageUrl
-              usesCustomOpenGraphImage
-              repositoryTopics(first:6){
-                nodes{
-                  topic{
-                    name
+        node {
+          ... on Repository {
+            name
+            description
+            forkCount
+            stargazers {
+              totalCount
+            }
+            homepageUrl
+            pushedAt
+            openGraphImageUrl
+            usesCustomOpenGraphImage
+            refs(refPrefix: "refs/heads/", last: 3) {
+              nodes {
+                name
+                target {
+                  ... on Commit {
+                    history {
+                      totalCount
+                    }
+                    messageHeadline
+                    pushedDate
                   }
                 }
               }
-              url
-              id
-              diskUsage
-              primaryLanguage {
-                name
-                color
+            }
+            repositoryTopics(first: 6) {
+              nodes {
+                topic {
+                  name
+                }
               }
+            }
+            url
+            id
+            diskUsage
+            primaryLanguage {
+              name
+              color
             }
           }
         }
       }
     }
+    repositories(orderBy: {field: PUSHED_AT, direction: ASC}, last: 3, privacy: PUBLIC, isFork: false) {
+      nodes {
+        name
+        description
+        forkCount
+        stargazers {
+          totalCount
+        }
+        homepageUrl
+        pushedAt
+        openGraphImageUrl
+        usesCustomOpenGraphImage
+        refs(refPrefix: "refs/heads/", last: 3) {
+          nodes {
+            name
+            target {
+              ... on Commit {
+                history {
+                  totalCount
+                }
+                messageHeadline
+                pushedDate
+              }
+            }
+          }
+        }
+        repositoryTopics(first: 6) {
+          nodes {
+            topic {
+              name
+            }
+          }
+        }
+        url
+        id
+        diskUsage
+        primaryLanguage {
+          name
+          color
+        }
+      }
+    }
+  }
 }
 `,
   });
