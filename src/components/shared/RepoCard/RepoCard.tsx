@@ -61,11 +61,11 @@ const RepoCard: React.FC<IRepoCard> = (props) => {
           <Grid item xs={12} classes={{ root: 'repo-card-details-main' }}>
             {name && (
               <Typography variant="h6" gutterBottom>
-                {emoji('📌')} {name}
+                {emoji('🗄️')} {name}
               </Typography>
             )}
             {description && (
-              <Typography variant="body1" gutterBottom>
+              <Typography variant="body2" gutterBottom>
                 {description}
               </Typography>
             )}
