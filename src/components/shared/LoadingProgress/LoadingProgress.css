@@ -1,0 +1,15 @@
+/*--- Loading styles ---*/
+
+.loading__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  align-self: stretch;
+  min-height: 100%;
+}
+
+.loading__container-source {
+  margin-top: 1rem !important;
+}
