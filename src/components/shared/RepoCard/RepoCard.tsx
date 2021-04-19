@@ -85,7 +85,7 @@ const RepoCard: React.FC<IRepoCard> = (props) => {
           </Grid>
         </Grid>
       </CardContent>
-      <CardActions>
+      <CardActions classes={{ root: 'repo-card-actions' }}>
         <Button size="small" onClick={() => openInNewTab(url)}>
           Github
         </Button>

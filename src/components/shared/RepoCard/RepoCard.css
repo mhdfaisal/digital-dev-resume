@@ -50,3 +50,7 @@
   flex-basis: 0 !important;
   margin-top: 2rem !important;
 }
+
+.repo-card-actions {
+  justify-content: space-around;
+}
