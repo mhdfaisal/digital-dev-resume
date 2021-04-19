@@ -7,6 +7,7 @@ import emoji from 'react-easy-emoji';
 
 import GithubProfileContext from '../../context/GithubProfileContext';
 import ErrorMessage from '../shared/ErrorMessage/ErrorMessage';
+import LoadingProgress from '../shared/LoadingProgress/LoadingProgress';
 import errorMsgs from '../../utils/constants/error-messages';
 
 import './GithubVCard.css';
@@ -56,6 +57,7 @@ const GithubVCard: React.FC = () => {
       {!isLoading && error && (
         <ErrorMessage oneLiner={errorMsgs.PERSONAL_INFO_CARD_ERROR_MSG} />
       )}
+      <LoadingProgress isLoading={isLoading} source="GitHub" />
     </>
   );
 };
