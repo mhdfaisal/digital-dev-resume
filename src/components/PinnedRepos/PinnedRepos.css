@@ -5,7 +5,10 @@
   align-items: stretch;
 }
 
-.pinned__repos-paper-container {
-  margin-top: 16px;
+.pinned__repos-grid-container {
   padding: 16px;
+}
+
+.pinned__repos-accordion-title img {
+  margin-right: 0.5rem !important;
 }
