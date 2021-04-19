@@ -27,14 +27,8 @@ const useStyles = makeStyles(() => ({
  */
 const ImageAvatar: React.FC<IImageAvatarProps> = (props) => {
   const classes = useStyles();
-
-  return (
-    <Avatar
-      alt="Remy Sharp"
-      src="https://material-ui.com/static/images/avatar/1.jpg"
-      className={classes.large}
-    />
-  );
+  const { alt = '', src = '' } = props;
+  return <Avatar alt={alt} src={src} className={classes.large} />;
 };
 
 export default ImageAvatar;
