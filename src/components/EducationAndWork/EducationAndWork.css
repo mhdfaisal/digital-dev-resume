@@ -1,8 +1,8 @@
+/*--- Education and Work styles ---*/
 .education__and__work {
   margin-top: 2.5rem !important;
 }
 
-.education__and__work-paper-container {
-  margin-top: 16px;
-  padding: 16px;
+.education__and__work-container-grid {
+  margin-top: 1rem !important;
 }

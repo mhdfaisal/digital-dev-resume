@@ -18,16 +18,18 @@ const EducationAndWork: React.FC = () => (
       <Typography variant="h4" gutterBottom>
         Education &amp; Work Experience
       </Typography>
-      <Paper classes={{ root: 'education__and__work-paper-container' }}>
-        <Grid container spacing={3}>
-          <Grid item sm={6}>
-            <EducationInfo />
-          </Grid>
-          <Grid item sm={6}>
-            <WorkExperience />
-          </Grid>
+      <Grid
+        container
+        spacing={3}
+        classes={{ root: 'education__and__work-container-grid' }}
+      >
+        <Grid item sm={6}>
+          <EducationInfo />
         </Grid>
-      </Paper>
+        <Grid item sm={6}>
+          <WorkExperience />
+        </Grid>
+      </Grid>
     </Grid>
   </Grid>
 );
