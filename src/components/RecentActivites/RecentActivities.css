@@ -1,11 +1,16 @@
 /*--- FeaturedRepos Styles ---*/
 
-.featured__repos {
+.recent__activities {
   margin-top: 2.5rem !important;
   align-items: stretch;
 }
 
-.featured__repos-paper-container {
-  margin-top: 16px;
+.recent__activities-grid-container {
   padding: 16px;
+}
+
+.recent__activities-accordion-title img {
+  margin-right: 0.5rem !important;
+  height: 1.5rem !important;
+  width: 1.5rem !important;
 }
