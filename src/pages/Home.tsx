@@ -7,6 +7,7 @@ import Profile from '../components/Profile/Profile';
 import EducationAndWork from '../components/EducationAndWork/EducationAndWork';
 import PinnedRepos from '../components/PinnedRepos/PinnedRepos';
 import FeaturedRepos from '../components/FeaturedRepos/FeaturedRepos';
+import Footer from '../components/Footer/Footer';
 
 /**
  * Link a style sheet to the Home component using the hook pattern.
@@ -33,6 +34,7 @@ const Home: React.FC = () => {
       <EducationAndWork />
       <PinnedRepos />
       <FeaturedRepos />
+      <Footer />
     </Paper>
   );
 };
