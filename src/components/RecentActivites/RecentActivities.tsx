@@ -10,6 +10,7 @@ import { v1 as uuidv1 } from 'uuid';
 
 import RepoCard from '../shared/RepoCard/RepoCard';
 import ErrorMessage from '../shared/ErrorMessage/ErrorMessage';
+import LoadingProgress from '../shared/LoadingProgress/LoadingProgress';
 import GithubProfileContext, {
   RefNode as RecentRepositoriesNodeType,
 } from '../../context/GithubProfileContext';
@@ -38,7 +39,7 @@ const RecentActivities: React.FC = () => {
   return (
     <Grid container classes={{ root: 'recent__activities' }}>
       <Grid item md={1} />
-      <Grid item md={10}>
+      <Grid item md={10} classes={{ root: 'recent__activities-full-w' }}>
         <Accordion
           expanded={expanded === 'panel1'}
           onChange={handleChange('panel1')}
@@ -74,6 +75,7 @@ const RecentActivities: React.FC = () => {
                 {!isLoading && error && (
                   <ErrorMessage oneLiner={errorMsgs.RECENT_REPOS_ERROR_MSG} />
                 )}
+                <LoadingProgress isLoading={isLoading} source="GitHub" />
               </Grid>
             </Grid>
           </AccordionDetails>

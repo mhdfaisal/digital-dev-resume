@@ -14,3 +14,7 @@
   height: 1.5rem !important;
   width: 1.5rem !important;
 }
+
+.recent__activities-full-w {
+  width: 100%;
+}
