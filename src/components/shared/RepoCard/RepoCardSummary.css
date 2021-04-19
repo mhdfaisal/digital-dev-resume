@@ -1,0 +1,38 @@
+/*--- ReportCardSummary styles ---*/
+
+.repo__card-summary-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 0.9rem !important;
+}
+
+.repo__card__summary-primary-lang,
+.repo__card__summary-fork,
+.repo__card__summary-star,
+.repo__card__summary-usage {
+  margin-bottom: 0.3rem;
+}
+
+.repo__card__summary-primary-lang img,
+.repo__card__summary-fork img,
+.repo__card__summary-star img,
+.repo__card__summary-usage img,
+.repo__card-summary-bottom-item img {
+  margin-right: 0.3rem !important;
+  height: 0.9rem !important;
+  width: 0.9rem !important;
+}
+
+.repo__card__summary-primary-lang-color {
+  height: 10px;
+  width: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 0.25rem;
+}
+
+.repo__card-summary-bottom-item {
+  display: flex;
+  margin-bottom: 0.5rem !important;
+}
