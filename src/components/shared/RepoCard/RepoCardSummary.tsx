@@ -2,6 +2,7 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import emoji from 'react-easy-emoji';
+import moment from 'moment';
 
 import { RefNode } from '../../../context/GithubProfileContext';
 
@@ -92,7 +93,7 @@ const RepoCardSummary: React.FC<IRepoCardSummary> = (props) => {
         >
           <span>{emoji('⚡')}</span>
           <span>
-            1m ago on <span>{name}</span>
+            {moment(new Date(pushedDate)).fromNow()} on <span>{name}</span>
           </span>
         </Typography>
         <Typography
