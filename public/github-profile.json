@@ -2,7 +2,7 @@
   "data": {
     "user": {
       "name": "Mohd Faisal",
-      "bio": "A programming geek.",
+      "bio": "My specialization - simplifying and solving business problems efficiently using modern technologies and clean coding practices.",
       "url": "https://github.com/mhdfaisal",
       "isHireable": false,
       "avatarUrl": "https://avatars.githubusercontent.com/u/42058991?u=6f1e921e7dbf0c5c605e4f704baac93b607512c4&v=4",
@@ -11,7 +11,7 @@
         "emojiHTML": "<div><g-emoji class=\"g-emoji\" alias=\"rocket\" fallback-src=\"https://github.githubassets.com/images/icons/emoji/unicode/1f680.png\">🚀</g-emoji></div>",
         "message": "Delivering"
       },
-      "company": "The TrustSearch",
+      "company": "Frontend Dev at TheTrustSearch",
       "pinnedItems": {
         "totalCount": 6,
         "edges": [

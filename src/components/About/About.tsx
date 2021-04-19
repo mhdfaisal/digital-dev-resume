@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import emoji from 'react-easy-emoji';
 
 import ShowMoreAccordion from '../shared/ShowMoreAccordion/ShowMoreAccordion';
+import GithubProfileContext from '../../context/GithubProfileContext';
 
 import { bioData, socialMediaLinks } from '../../assets/portfolio-info';
 import './About.css';
@@ -15,11 +16,22 @@ import './About.css';
 const About: React.FC = () => {
   const { aboutMe, recentChallengeSolved, bioTagLine } = bioData;
   const { linkedIn, skype } = socialMediaLinks;
+  const { isLoading, error, user } = useContext(GithubProfileContext);
+  const bio = user?.bio ?? '';
   return (
     <Paper className="about__container">
       <Typography variant="h4" classes={{ root: 'about__container-heading' }}>
         About Me
       </Typography>
+      {bio && (
+        <Typography
+          variant="body1"
+          key={Math.random()}
+          classes={{ root: 'about__container-about-para' }}
+        >
+          {bio}
+        </Typography>
+      )}
       {aboutMe &&
         aboutMe.map((aboutMePara) => (
           <Typography
