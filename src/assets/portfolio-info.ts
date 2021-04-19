@@ -137,35 +137,26 @@ const educationInfo: EducationInfo = [
     collegeName: `CATHEDRAL SR. SEC. SCHOOL`,
     collegeLogo:
       'https://material-ui.com/static/images/cards/live-from-space.jpg',
-    duration: '1999-2013',
+    duration: '1999 - 2013',
     description: 'INTERMEDIATE',
-    descriptionBullets: [
-      'Simplified shipment business problems using modern technologies',
-      'Developed a reactive Web Application using Meteor Js for shipment port call optimizations',
-    ],
+    descriptionBullets: false,
   },
   {
     collegeName: 'MCRP UNIVERSITY, BHOPAL',
     collegeLogo:
       'https://material-ui.com/static/images/cards/live-from-space.jpg',
-    duration: '2014-2017',
+    duration: '2014 - 2017',
     description: 'BACHELOR OF COMPUTER APPLICATIONS (BCA)',
-    descriptionBullets: [
-      'Simplified shipment business problems using modern technologies',
-      'Developed a reactive Web Application using Meteor Js for shipment port call optimizations',
-    ],
+    descriptionBullets: false,
   },
   {
     collegeName: 'INTEGRAL UNIVERSITY DDE, LUCKNOW',
     collegeLogo:
       'https://material-ui.com/static/images/cards/live-from-space.jpg',
 
-    duration: '2017-2019',
-    description: 'MASTER OF COMPUTER APPLICATIONS (MCA), Distance Ed.',
-    descriptionBullets: [
-      'Simplified shipment business problems using modern technologies',
-      'Developed a reactive Web Application using Meteor Js for shipment port call optimizations',
-    ],
+    duration: '2017 - 2019',
+    description: 'MASTER OF COMPUTER APPLICATIONS (MCA)',
+    descriptionBullets: false,
   },
 ];
 
