@@ -9,14 +9,18 @@ interface IErrorMessage {
 
 /**
  * A presentational component to display error messages
+ * @props children - React node
+ * @props oneLiner - a single line error msg to be displayed
  */
 const ErrorMessage: React.FC<IErrorMessage> = (props) => {
   const { children, oneLiner = '' } = props;
   return (
     <Grid container>
-      <Typography variant="body1" color="error">
-        {oneLiner}
-      </Typography>
+      {oneLiner && (
+        <Typography variant="body1" color="error">
+          {oneLiner}
+        </Typography>
+      )}
       {children}
     </Grid>
   );
