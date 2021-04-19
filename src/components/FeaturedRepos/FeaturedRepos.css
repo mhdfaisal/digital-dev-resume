@@ -1,11 +1,11 @@
-/*--- PinnedRepos Styles ---*/
+/*--- FeaturedRepos Styles ---*/
 
-.pinned__repos {
+.featured__repos {
   margin-top: 2.5rem !important;
   align-items: stretch;
 }
 
-.pinned__repos-paper-container {
+.featured__repos-paper-container {
   margin-top: 16px;
   padding: 16px;
 }
