@@ -24,6 +24,7 @@ const PinnedRepos: React.FC = () => {
   // state variable and method for controlled accordion
   const [expanded, setExpanded] = React.useState<string | false>('panel1');
 
+  // handler for accordion expand state change
   const handleChange = (panel: string) => (
     event: React.ChangeEvent<{}>,
     newExpanded: boolean
@@ -45,7 +46,7 @@ const PinnedRepos: React.FC = () => {
             id="panel1a-header"
           >
             <Typography
-              variant="h5"
+              variant="h6"
               classes={{ root: 'pinned__repos-accordion-title' }}
             >
               {emoji('📌')} Pinned Repositories

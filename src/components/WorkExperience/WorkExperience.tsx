@@ -23,7 +23,7 @@ const WorkExperience: React.FC = () => (
         aria-controls="work__experience-content"
         id="work__experience-header"
       >
-        <Typography variant="h6" gutterBottom color="textSecondary">
+        <Typography variant="h6" gutterBottom>
           <span className="work__experience-header-icon">{emoji(' 🏗️')}</span>
           <span>Work Experience</span>
         </Typography>

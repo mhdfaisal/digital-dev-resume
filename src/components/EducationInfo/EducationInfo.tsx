@@ -23,7 +23,7 @@ const EducationInfo: React.FC = () => (
         aria-controls="education__info-content"
         id="education__info-header"
       >
-        <Typography variant="h6" gutterBottom color="textSecondary">
+        <Typography variant="h6" gutterBottom>
           <span className="education__info-header-icon">{emoji('🎓')}</span>{' '}
           <span> Education</span>
         </Typography>

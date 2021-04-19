@@ -15,9 +15,6 @@ const EducationAndWork: React.FC = () => (
   <Grid container classes={{ root: 'education__and__work' }}>
     <Grid item md={1} />
     <Grid item md={10}>
-      <Typography variant="h4" gutterBottom>
-        Education &amp; Work Experience
-      </Typography>
       <Grid
         container
         spacing={3}
