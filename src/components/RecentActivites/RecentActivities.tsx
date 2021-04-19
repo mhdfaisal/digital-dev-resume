@@ -9,9 +9,11 @@ import emoji from 'react-easy-emoji';
 import { v1 as uuidv1 } from 'uuid';
 
 import RepoCard from '../shared/RepoCard/RepoCard';
+import ErrorMessage from '../shared/ErrorMessage/ErrorMessage';
 import GithubProfileContext, {
   RefNode as RecentRepositoriesNodeType,
 } from '../../context/GithubProfileContext';
+import errorMsgs from '../../utils/constants/error-messages';
 
 import './RecentActivities.css';
 
@@ -69,6 +71,9 @@ const RecentActivities: React.FC = () => {
                       />
                     </Grid>
                   ))}
+                {!isLoading && error && (
+                  <ErrorMessage oneLiner={errorMsgs.RECENT_REPOS_ERROR_MSG} />
+                )}
               </Grid>
             </Grid>
           </AccordionDetails>
