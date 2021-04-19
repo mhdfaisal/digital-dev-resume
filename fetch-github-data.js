@@ -40,7 +40,7 @@ user(login: "mhdfaisal") {
       message
     }
     company
-    pinnedItems(first: 6, types: [REPOSITORY]) {
+    pinnedItems(first: 3, types: [REPOSITORY]) {
       totalCount
       edges {
         node {
@@ -69,7 +69,7 @@ user(login: "mhdfaisal") {
                 }
               }
             }
-            repositoryTopics(first: 6) {
+            repositoryTopics(first: 15) {
               nodes {
                 topic {
                   name
@@ -113,7 +113,7 @@ user(login: "mhdfaisal") {
             }
           }
         }
-        repositoryTopics(first: 6) {
+        repositoryTopics(first: 15) {
           nodes {
             topic {
               name
