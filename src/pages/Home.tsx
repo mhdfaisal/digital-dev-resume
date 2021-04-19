@@ -9,6 +9,7 @@ import EducationAndWork from '../components/EducationAndWork/EducationAndWork';
 import PinnedRepos from '../components/PinnedRepos/PinnedRepos';
 import RecentActivites from '../components/RecentActivites/RecentActivities';
 import Footer from '../components/Footer/Footer';
+import GithubProfileContext from '../context/GithubProfileContext';
 
 /**
  * Link a style sheet to the Home component using the hook pattern.
@@ -79,12 +80,14 @@ const Home: React.FC = () => {
 
   return (
     <Paper elevation={0} className={classes.root}>
-      <Header />
-      <Profile />
-      <EducationAndWork />
-      <PinnedRepos />
-      <RecentActivites />
-      <Footer />
+      <GithubProfileContext.Provider value={{ ...gitHubProfileData }}>
+        <Header />
+        <Profile />
+        <EducationAndWork />
+        <PinnedRepos />
+        <RecentActivites />
+        <Footer />
+      </GithubProfileContext.Provider>
     </Paper>
   );
 };
