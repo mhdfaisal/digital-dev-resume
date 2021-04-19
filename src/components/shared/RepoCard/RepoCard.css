@@ -18,6 +18,7 @@
 .repo-card-content-grid {
   display: flex;
   flex-direction: column;
+  padding-bottom: 0.5rem;
 }
 
 .repo-card-details-grid {
@@ -47,4 +48,5 @@
 
 .repo-card-meta-grid {
   flex-basis: 0 !important;
+  margin-top: 2rem !important;
 }
