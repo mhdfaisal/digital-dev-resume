@@ -1,26 +1,26 @@
 import React from 'react';
 
 // type for repositories commits ref node object
-type RefNode = {
+export type RefNode = {
   name?: 'string';
   target?: {
     history?: {
       totalCount?: number;
-      messageHeadline?: string;
-      pushedDate?: string;
     };
+    messageHeadline?: string;
+    pushedDate?: string;
   };
 };
 
 // type for repository topics node.
-type RepositoryTopicsNode = {
+export type RepositoryTopicsNode = {
   topic?: {
     name?: string;
   };
 };
 
 // type for pinned item edge object.
-type NodeType = {
+export type NodeType = {
   description?: string;
   diskUsage?: number;
   forkCount?: number;
@@ -47,12 +47,12 @@ type NodeType = {
 };
 
 // type for an array of pinned item edges.
-type NodeArr = {
+export type NodeArr = {
   node: NodeType[];
 };
 
 // type for github user object
-type GithubUser = {
+export type GithubUser = {
   avatarUrl?: string;
   bio?: string;
   company?: string;
