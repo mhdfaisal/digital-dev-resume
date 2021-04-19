@@ -13,6 +13,10 @@
   width: 1.2rem !important;
 }
 
+.github__vcard {
+  font-size: 1.2rem;
+}
+
 .github__vcard-list .MuiListItem-button:hover {
   background-color: transparent !important;
 }
