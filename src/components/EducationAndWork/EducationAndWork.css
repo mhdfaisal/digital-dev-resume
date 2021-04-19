@@ -2,3 +2,7 @@
 .education__and__work-container-grid {
   margin-top: 1rem !important;
 }
+
+.education__and__work-full-w {
+  width: 100% !important;
+}

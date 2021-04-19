@@ -14,7 +14,7 @@ import './EducationAndWork.css';
 const EducationAndWork: React.FC = () => (
   <Grid container classes={{ root: 'education__and__work' }}>
     <Grid item md={1} />
-    <Grid item md={10}>
+    <Grid item md={10} classes={{ root: 'education__and__work-full-w' }}>
       <Grid
         container
         spacing={3}
