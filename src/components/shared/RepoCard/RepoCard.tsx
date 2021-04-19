@@ -6,6 +6,7 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import emoji from 'react-easy-emoji';
+import { v1 as uuidv1 } from 'uuid';
 
 import SkillTag from '../SkillTag/SkillTag';
 import RepoCardSummary from './RepoCardSummary';
@@ -50,7 +51,7 @@ const RepoCard: React.FC<IRepoCard> = (props) => {
               const topicName = topic?.name ?? '';
               const id = topic?.id;
               return (
-                <span key={Math.random()}>
+                <span key={uuidv1()}>
                   <SkillTag name={topicName} id={id} />
                 </span>
               );

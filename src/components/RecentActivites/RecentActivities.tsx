@@ -6,6 +6,7 @@ import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import emoji from 'react-easy-emoji';
+import { v1 as uuidv1 } from 'uuid';
 
 import RepoCard from '../shared/RepoCard/RepoCard';
 import GithubProfileContext, {
@@ -60,7 +61,7 @@ const RecentActivities: React.FC = () => {
               <Grid container spacing={3}>
                 {nodes &&
                   nodes.map((repository) => (
-                    <Grid item sm={4} key={Math.random()}>
+                    <Grid item sm={4} key={uuidv1()}>
                       <RepoCard
                         repoDetails={{
                           ...(repository as RecentRepositoriesNodeType),

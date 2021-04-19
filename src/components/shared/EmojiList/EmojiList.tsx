@@ -1,5 +1,6 @@
 import React from 'react';
 import emoji from 'react-easy-emoji';
+import { v1 as uuidv1 } from 'uuid';
 
 import './EmojiList.css';
 
@@ -17,7 +18,7 @@ const EmojiList: React.FC<IEmojiList> = (props) => {
     <span className="emoji__list">
       {dataArr &&
         dataArr.map((dataItem) => (
-          <span key={Math.random()} className="emoji__list__item">
+          <span key={uuidv1()} className="emoji__list__item">
             <span className="emoji__list__item-icon">{emoji('👉')}</span>
             <span className="emoji__list__item-text">{dataItem}</span>
           </span>

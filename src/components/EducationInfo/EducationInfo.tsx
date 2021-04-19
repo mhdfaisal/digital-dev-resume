@@ -6,6 +6,7 @@ import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import emoji from 'react-easy-emoji';
+import { v1 as uuidv1 } from 'uuid';
 
 import InfoCard from '../shared/InfoCard/InfoCard';
 
@@ -40,7 +41,7 @@ const EducationInfo: React.FC = () => (
                 descriptionBullets,
               } = educationItem;
               return (
-                <Grid item xs={12} key={Math.random()}>
+                <Grid item xs={12} key={uuidv1()}>
                   <InfoCard
                     title={collegeName}
                     metaData={duration}

@@ -3,6 +3,7 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import emoji from 'react-easy-emoji';
+import { v1 as uuidv1 } from 'uuid';
 
 import ShowMoreAccordion from '../shared/ShowMoreAccordion/ShowMoreAccordion';
 import GithubProfileContext from '../../context/GithubProfileContext';
@@ -26,7 +27,7 @@ const About: React.FC = () => {
       {bio && (
         <Typography
           variant="body1"
-          key={Math.random()}
+          key={uuidv1()}
           classes={{ root: 'about__container-about-para' }}
         >
           {bio}
@@ -36,7 +37,7 @@ const About: React.FC = () => {
         aboutMe.map((aboutMePara) => (
           <Typography
             variant="body1"
-            key={Math.random()}
+            key={uuidv1()}
             classes={{ root: 'about__container-about-para' }}
           >
             {aboutMePara}
