@@ -6,6 +6,8 @@ import ListItemText from '@material-ui/core/ListItemText';
 import emoji from 'react-easy-emoji';
 
 import GithubProfileContext from '../../context/GithubProfileContext';
+import ErrorMessage from '../shared/ErrorMessage/ErrorMessage';
+import errorMsgs from '../../utils/constants/error-messages';
 
 import './GithubVCard.css';
 
@@ -21,29 +23,40 @@ const GithubVCard: React.FC = () => {
   const emojiHTMLStr: string = emojiHTML as string;
 
   return (
-    <List
-      component="ul"
-      aria-label="main mailbox folders"
-      classes={{ root: 'github__vcard-list' }}
-    >
-      <ListItem button>
-        <ListItemIcon>
-          <div
-            className="github__vcard-g-emoji"
-            dangerouslySetInnerHTML={{ __html: emojiHTMLStr }}
-          />
-        </ListItemIcon>
-        <ListItemText primary={message} />
-      </ListItem>
-      <ListItem button>
-        <ListItemIcon>{emoji('🏠')}</ListItemIcon>
-        <ListItemText primary={country} />
-      </ListItem>
-      <ListItem button>
-        <ListItemIcon>{emoji(' 🏗️')}</ListItemIcon>
-        <ListItemText primary={company} />
-      </ListItem>
-    </List>
+    <>
+      <List
+        component="ul"
+        aria-label="main mailbox folders"
+        classes={{ root: 'github__vcard-list' }}
+      >
+        {message && (
+          <ListItem>
+            <ListItemIcon>
+              <div
+                className="github__vcard-g-emoji"
+                dangerouslySetInnerHTML={{ __html: emojiHTMLStr }}
+              />
+            </ListItemIcon>
+            <ListItemText primary={message} />
+          </ListItem>
+        )}
+        {country && (
+          <ListItem>
+            <ListItemIcon>{emoji('🏠')}</ListItemIcon>
+            <ListItemText primary={country} />
+          </ListItem>
+        )}
+        {company && (
+          <ListItem>
+            <ListItemIcon>{emoji(' 🏗️')}</ListItemIcon>
+            <ListItemText primary={company} />
+          </ListItem>
+        )}
+      </List>
+      {!isLoading && error && (
+        <ErrorMessage oneLiner={errorMsgs.PERSONAL_INFO_CARD_ERROR_MSG} />
+      )}
+    </>
   );
 };
 
