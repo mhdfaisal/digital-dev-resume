@@ -6,7 +6,7 @@ import Header from '../components/Header/Header';
 import Profile from '../components/Profile/Profile';
 import EducationAndWork from '../components/EducationAndWork/EducationAndWork';
 import PinnedRepos from '../components/PinnedRepos/PinnedRepos';
-import FeaturedRepos from '../components/FeaturedRepos/FeaturedRepos';
+import RecentActivites from '../components/RecentActivites/RecentActivities';
 import Footer from '../components/Footer/Footer';
 
 /**
@@ -33,7 +33,7 @@ const Home: React.FC = () => {
       <Profile />
       <EducationAndWork />
       <PinnedRepos />
-      <FeaturedRepos />
+      <RecentActivites />
       <Footer />
     </Paper>
   );

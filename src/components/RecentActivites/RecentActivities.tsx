@@ -5,17 +5,17 @@ import Typography from '@material-ui/core/Typography';
 
 import RepoCard from '../shared/RepoCard/RepoCard';
 
-import './FeaturedRepos.css';
+import './RecentActivities.css';
 
 /**
- * A container component to display featured repositories on github
+ * A container component to display recently accessed repositories on github by the user.
  */
-const FeaturedRepos: React.FC = () => (
+const RecentActivities: React.FC = () => (
   <Grid container classes={{ root: 'featured__repos' }}>
     <Grid item md={1} />
     <Grid item md={10}>
       <Typography variant="h4" gutterBottom>
-        Featured Repositories
+        Recent Activities
       </Typography>
       <Paper classes={{ root: 'featured__repos-paper-container' }}>
         <Grid container spacing={3}>
@@ -34,4 +34,4 @@ const FeaturedRepos: React.FC = () => (
   </Grid>
 );
 
-export default FeaturedRepos;
+export default RecentActivities;
