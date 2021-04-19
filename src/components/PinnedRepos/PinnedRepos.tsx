@@ -10,6 +10,7 @@ import { v1 as uuidv1 } from 'uuid';
 
 import RepoCard from '../shared/RepoCard/RepoCard';
 import ErrorMessage from '../shared/ErrorMessage/ErrorMessage';
+import LoadingProgress from '../shared/LoadingProgress/LoadingProgress';
 import GithubProfileContext, {
   NodeType as PinnedItemsNodeType,
 } from '../../context/GithubProfileContext';
@@ -38,7 +39,7 @@ const PinnedRepos: React.FC = () => {
   return (
     <Grid container classes={{ root: 'pinned__repos' }}>
       <Grid item md={1} />
-      <Grid item md={10}>
+      <Grid item md={10} classes={{ root: 'pinned__repos-full-w' }}>
         <Accordion
           expanded={expanded === 'panel1'}
           onChange={handleChange('panel1')}
@@ -69,6 +70,7 @@ const PinnedRepos: React.FC = () => {
                 {!isLoading && error && (
                   <ErrorMessage oneLiner={errorMsgs.PINNED_REPOS_ERROR_MSG} />
                 )}
+                <LoadingProgress isLoading={isLoading} source="GitHub" />
               </Grid>
             </Grid>
           </AccordionDetails>
