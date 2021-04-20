@@ -1,6 +1,6 @@
 {
   "name": "digital-dev-resume",
-  "homepage": "https://mhdfaisal.github.io",
+  "homepage": "https://mhdfaisal.github.io/digital-dev-resume",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -30,7 +30,7 @@
     "predeploy": "npm run build",
     "start": "node fetch-github-data.js && react-scripts start",
     "build": "node fetch-github-data.js && react-scripts build",
-    "deploy": "gh-pages -b master -d build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src --color",
