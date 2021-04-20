@@ -69,7 +69,7 @@ const workExperiences: WorkExperiences = [
   {
     role: 'Remote Front End Developer (React Js)',
     companyName: 'TrustSearch Ltd, Riga, Latvia',
-    companyLogo: '/images/trustsearch-logo.png',
+    companyLogo: `${process.env.PUBLIC_URL}/images/trustsearch-logo.png`,
     duration: 'July 2019 - Present',
     description:
       'Develop an application where - Internet users check online reputation to websites, but website owners build trustworthiness online',
@@ -93,7 +93,7 @@ const workExperiences: WorkExperiences = [
   {
     role: 'Freelance Web Developer',
     companyName: 'E-Developers World, India',
-    companyLogo: '/images/e-developers.png',
+    companyLogo: `${process.env.PUBLIC_URL}/images/e-developers.png`,
     duration: 'July 2016 - July 2019',
     description:
       'Being a developer at a service based company, experienced working on multiple domains including shipping, finance, e-commerce, etc. Lead the development of a product that automated the processes in the shipping industry to optimise port call operations.',
