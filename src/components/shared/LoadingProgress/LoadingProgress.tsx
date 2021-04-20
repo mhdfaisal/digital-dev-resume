@@ -23,7 +23,7 @@ const LoadingProgress: React.FC<ILoadingProps> = ({ isLoading, source }) => (
           variant="body2"
           classes={{ root: 'loading__container-source' }}
         >
-          'Loading data from {source}...'
+          Loading data from {source}...
         </Typography>
       </Grid>
     ) : null}
