@@ -40,7 +40,7 @@ user(login: "mhdfaisal") {
       message
     }
     company
-    pinnedItems(first: 3, types: [REPOSITORY]) {
+    pinnedItems(first: 6, types: [REPOSITORY]) {
       totalCount
       edges {
         node {
