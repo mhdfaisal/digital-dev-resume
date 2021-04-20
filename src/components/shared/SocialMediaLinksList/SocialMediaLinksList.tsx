@@ -22,7 +22,7 @@ const IconButtons: React.FC = () => {
   const classes = useStyles();
   const {
     github,
-    gmail,
+    email,
     linkedIn,
     twitter,
     facebook,
@@ -36,8 +36,8 @@ const IconButtons: React.FC = () => {
           <GitHubIcon />
         </IconButton>
       )}
-      {gmail && (
-        <IconButton aria-label="gmail-link" color="primary">
+      {email && (
+        <IconButton aria-label="email-link" color="primary">
           <EmailIcon />
         </IconButton>
       )}

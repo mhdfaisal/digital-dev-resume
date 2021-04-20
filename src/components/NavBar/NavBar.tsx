@@ -10,6 +10,8 @@ import Grid from '@material-ui/core/Grid';
 
 import ToolTipIconButton from '../shared/ToolTipIconButton/ToolTipIconButton';
 import { ThemeContext } from '../../context/ThemeContext';
+import { socialMediaLinks } from '../../assets/portfolio-info';
+import { openInNewTab } from '../../utils/helpers';
 
 import './NavBar.css';
 
@@ -20,12 +22,18 @@ const NavBar: React.FC = () => {
   // theme mode context data, to identify and switch between themes
   const { themeMode, toggleThemeMode } = useContext(ThemeContext);
 
+  /**
+   * Handler for theme toggle button click event
+   * @param e : Event
+   */
   const onThemeToggle = (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
     e.preventDefault();
     toggleThemeMode();
   };
+
+  const { mailToLink, telephoneLink } = socialMediaLinks;
 
   return (
     <nav className="navbar__container">
@@ -51,16 +59,26 @@ const NavBar: React.FC = () => {
               sm={4}
               classes={{ root: 'navbar__container-icons-grid' }}
             >
-              <div className="navbar__container-icon-grid-item">
-                <ToolTipIconButton tooltipTitle="Call me">
-                  <PhoneIcon />
-                </ToolTipIconButton>
-              </div>
-              <div className="navbar__container-icon-grid-item">
-                <ToolTipIconButton tooltipTitle="Email me">
-                  <EmailIcon />
-                </ToolTipIconButton>
-              </div>
+              {telephoneLink && (
+                <div className="navbar__container-icon-grid-item">
+                  <ToolTipIconButton
+                    tooltipTitle="Call me"
+                    onClick={() => openInNewTab(telephoneLink)}
+                  >
+                    <PhoneIcon />
+                  </ToolTipIconButton>
+                </div>
+              )}
+              {mailToLink && (
+                <div className="navbar__container-icon-grid-item">
+                  <ToolTipIconButton
+                    tooltipTitle="Email me"
+                    onClick={() => openInNewTab(mailToLink)}
+                  >
+                    <EmailIcon />
+                  </ToolTipIconButton>
+                </div>
+              )}
               <div className="navbar__container-icon-grid-item">
                 <ToolTipIconButton
                   tooltipTitle="Toggle Light / Dark Mode"
