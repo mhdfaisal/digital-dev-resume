@@ -1,5 +1,9 @@
 /*--- Profile styles ---*/
 
+.profile__main-container-grid {
+  margin-top: 1rem !important;
+}
+
 .profile__personal-card-grid {
   display: flex;
   align-items: flex-start;

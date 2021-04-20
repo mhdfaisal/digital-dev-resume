@@ -10,7 +10,7 @@ import './Profile.css';
  * A container component to display personal info and bio data.
  */
 const Profile: React.FC = () => (
-  <Grid container>
+  <Grid container classes={{ root: 'profile__main-container-grid' }}>
     <Grid item md={1} />
     <Grid item md={3} classes={{ root: 'profile__personal-card-grid' }}>
       <PersonalInfoCard />
