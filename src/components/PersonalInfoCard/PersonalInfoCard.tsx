@@ -5,13 +5,16 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import InsertInvitationIcon from '@material-ui/icons/InsertInvitation';
+import GetAppIcon from '@material-ui/icons/GetApp';
 
 import SkillTag from '../shared/SkillTag/SkillTag';
 import ImageAvatar from '../shared/ImageAvatar/ImageAvatar';
 import GithubVCard from '../GithubVCard/GithubVCard';
 
-import { skillTags } from '../../assets/portfolio-info';
+import { skillTags, bioData } from '../../assets/portfolio-info';
 import GithubProfileContext from '../../context/GithubProfileContext';
+import { openInNewTab } from '../../utils/helpers';
 
 import './PersonalInfoCard.css';
 
@@ -19,9 +22,11 @@ import './PersonalInfoCard.css';
  * Card to display profile Information
  */
 const PersonalInfoCard = () => {
-  const { isLoading, error, user } = useContext(GithubProfileContext);
+  const { user } = useContext(GithubProfileContext);
+  const { meetingSchedulerLink, resumeDownloadLink } = bioData;
   const name = user?.name ?? '';
   const avatarUrl = user?.avatarUrl ?? '';
+
   return (
     <Card classes={{ root: 'person-info__card' }}>
       <CardContent>
@@ -57,8 +62,27 @@ const PersonalInfoCard = () => {
           </Grid>
         </Grid>
       </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
+      <CardActions classes={{ root: 'personal-info__card-actions' }}>
+        {meetingSchedulerLink && (
+          <Button
+            size="small"
+            variant="outlined"
+            startIcon={<InsertInvitationIcon />}
+            onClick={() => openInNewTab(meetingSchedulerLink)}
+          >
+            Book a call
+          </Button>
+        )}
+        {resumeDownloadLink && (
+          <Button
+            size="small"
+            variant="outlined"
+            startIcon={<GetAppIcon />}
+            onClick={() => openInNewTab(resumeDownloadLink)}
+          >
+            Resume
+          </Button>
+        )}
       </CardActions>
     </Card>
   );

@@ -36,3 +36,7 @@
 .personal-info__card-github-grid {
   margin-top: 1rem !important;
 }
+
+.personal-info__card-actions {
+  justify-content: space-around;
+}
