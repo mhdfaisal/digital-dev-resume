@@ -18,3 +18,24 @@
 .pinned__repos-full-w {
   width: 100%;
 }
+
+.pinned__repos-card-grid {
+  display: flex;
+  justify-content: center;
+}
+
+/*--- Media Queries ---*/
+
+@media (max-width: 960px) {
+  .pinned__repos-full-w {
+    justify-content: center;
+    margin: 0 auto 1rem auto !important;
+    max-width: 90% !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .pinned__repos-grid-container {
+    padding: 0 !important;
+  }
+}

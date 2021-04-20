@@ -61,7 +61,14 @@ const PinnedRepos: React.FC = () => {
               <Grid container spacing={3}>
                 {edges &&
                   edges.map((edge) => (
-                    <Grid item sm={4} key={uuidv1()}>
+                    <Grid
+                      item
+                      lg={4}
+                      md={6}
+                      xs={12}
+                      key={uuidv1()}
+                      classes={{ root: 'pinned__repos-card-grid' }}
+                    >
                       <RepoCard
                         repoDetails={{ ...(edge?.node as PinnedItemsNodeType) }}
                       />

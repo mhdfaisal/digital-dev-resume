@@ -64,7 +64,14 @@ const RecentActivities: React.FC = () => {
               <Grid container spacing={3}>
                 {nodes &&
                   nodes.map((repository) => (
-                    <Grid item sm={4} key={uuidv1()}>
+                    <Grid
+                      item
+                      lg={4}
+                      md={6}
+                      xs={12}
+                      key={uuidv1()}
+                      classes={{ root: 'recent__activities-card-grid' }}
+                    >
                       <RepoCard
                         repoDetails={{
                           ...(repository as RecentRepositoriesNodeType),

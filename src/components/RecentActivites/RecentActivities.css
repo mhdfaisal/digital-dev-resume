@@ -18,3 +18,24 @@
 .recent__activities-full-w {
   width: 100%;
 }
+
+.recent__activities-card-grid {
+  display: flex;
+  justify-content: center;
+}
+
+/*--- Media Queries ---*/
+
+@media (max-width: 960px) {
+  .recent__activities-full-w {
+    justify-content: center;
+    margin: 0 auto 1rem auto !important;
+    max-width: 90% !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .recent__activities-grid-container {
+    padding: 0 !important;
+  }
+}
