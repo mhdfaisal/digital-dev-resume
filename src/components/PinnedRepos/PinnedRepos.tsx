@@ -26,7 +26,7 @@ const PinnedRepos: React.FC = () => {
   const pinnedItems = user?.pinnedItems ?? {};
   const { edges = [] } = pinnedItems;
   // state variable and method for controlled accordion
-  const [expanded, setExpanded] = React.useState<string | false>(false);
+  const [expanded, setExpanded] = React.useState<string | false>('panel1');
 
   // handler for accordion expand state change
   const handleChange = (panel: string) => (
