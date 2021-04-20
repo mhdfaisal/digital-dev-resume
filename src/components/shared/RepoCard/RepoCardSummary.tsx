@@ -36,7 +36,7 @@ const RepoCardSummary: React.FC<IRepoCardSummary> = (props) => {
     latestCommitObj,
   } = repoSummary;
 
-  const { name, target } = latestCommitObj;
+  const { name = '', target = {} } = latestCommitObj ?? {};
   const totalCount = target?.history?.totalCount ?? 0;
   const messageHeadline = target?.messageHeadline ?? '';
   const pushedDate = target?.pushedDate ?? '';
