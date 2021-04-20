@@ -41,17 +41,20 @@ export type SkillTags = ISkillTag[] | false;
 
 /**
  * Social media links
- * @description github, gmail, linkedIn, twitter, ..etc - URLs.
+ * @description github, email, linkedIn, twitter, ..etc - URLs.
  */
 export interface ISocialMediaLinks {
   github: string | false;
-  gmail: string | false;
+  email: string | false;
   linkedIn: string | false;
   twitter: string | false;
   facebook: string | false;
   instagram: string | false;
   medium: string | false;
   skype: string | false;
+  mailToLink: string | false;
+  telephoneLink: string | false;
+  telephone: string | false;
 }
 
 /**

@@ -52,7 +52,10 @@ const skillTags: SkillTags = [
 // social media links
 const socialMediaLinks: ISocialMediaLinks = {
   github: 'https://github.com/mhdfaisal/',
-  gmail: 'fmohd195@gmail.com',
+  email: 'fmohd195@gmail.com',
+  mailToLink: 'mailto:fmohd195@gmail.com',
+  telephoneLink: 'tel:+91-9005809583',
+  telephone: '+91-9005809583',
   linkedIn: 'https://www.linkedin.com/in/mohdfaisal9005/',
   twitter: 'https://twitter.com/MohdFaisal9005',
   facebook: false,
