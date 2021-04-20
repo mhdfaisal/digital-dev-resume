@@ -4,11 +4,14 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import emoji from 'react-easy-emoji';
 import { v1 as uuidv1 } from 'uuid';
+import Button from '@material-ui/core/Button';
 
 import ShowMoreAccordion from '../shared/ShowMoreAccordion/ShowMoreAccordion';
 import GithubProfileContext from '../../context/GithubProfileContext';
 
 import { bioData, socialMediaLinks } from '../../assets/portfolio-info';
+import { openInNewTab } from '../../utils/helpers';
+
 import './About.css';
 
 /**
@@ -17,7 +20,7 @@ import './About.css';
 const About: React.FC = () => {
   const { aboutMe, recentChallengeSolved, bioTagLine } = bioData;
   const { linkedIn, skype } = socialMediaLinks;
-  const { isLoading, error, user } = useContext(GithubProfileContext);
+  const { user } = useContext(GithubProfileContext);
   const bio = user?.bio ?? '';
   return (
     <Paper className="about__container">
@@ -57,12 +60,18 @@ const About: React.FC = () => {
         {linkedIn && (
           <Typography variant="body1">
             {emoji('📥')} DMs are open on{' '}
-            <a href={linkedIn} rel="noreferrer" target="_blank">
+            <Button color="primary" onClick={() => openInNewTab(linkedIn)}>
               LinkedIn
-            </a>{' '}
+            </Button>{' '}
             {skype && (
               <span>
-                and <a href={`skype:${skype}?chat`}>Skype</a>
+                and{' '}
+                <Button
+                  color="primary"
+                  onClick={() => openInNewTab(`skype:${skype}?chat`)}
+                >
+                  Skype
+                </Button>
               </span>
             )}
           </Typography>

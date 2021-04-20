@@ -14,3 +14,17 @@
   justify-content: flex-end;
   align-items: center;
 }
+
+/*--- Media Queries ---*/
+
+@media (max-width: 960px) {
+  .profile__personal-card-grid {
+    justify-content: center;
+    margin: 0 auto 1rem auto !important;
+    max-width: 90% !important;
+  }
+  .profile__about-card-grid {
+    max-width: 90% !important;
+    margin: 0 auto !important;
+  }
+}
