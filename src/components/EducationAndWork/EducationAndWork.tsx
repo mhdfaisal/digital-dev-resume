@@ -20,10 +20,10 @@ const EducationAndWork: React.FC = () => (
         spacing={3}
         classes={{ root: 'education__and__work-container-grid' }}
       >
-        <Grid item sm={6}>
+        <Grid item md={6}>
           <EducationInfo />
         </Grid>
-        <Grid item sm={6}>
+        <Grid item md={6}>
           <WorkExperience />
         </Grid>
       </Grid>

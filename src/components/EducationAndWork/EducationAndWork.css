@@ -6,3 +6,13 @@
 .education__and__work-full-w {
   width: 100% !important;
 }
+
+/*--- Media Queries ---*/
+
+@media (max-width: 960px) {
+  .education__and__work-full-w {
+    justify-content: center;
+    margin: 0 auto 1rem auto !important;
+    max-width: 90% !important;
+  }
+}

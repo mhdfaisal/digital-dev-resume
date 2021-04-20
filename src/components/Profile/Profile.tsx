@@ -12,10 +12,10 @@ import './Profile.css';
 const Profile: React.FC = () => (
   <Grid container classes={{ root: 'profile__main-container-grid' }}>
     <Grid item md={1} />
-    <Grid item md={3} xs={12} classes={{ root: 'profile__personal-card-grid' }}>
+    <Grid item md={3} classes={{ root: 'profile__personal-card-grid' }}>
       <PersonalInfoCard />
     </Grid>
-    <Grid item md={7} xs={12} classes={{ root: 'profile__about-card-grid' }}>
+    <Grid item md={7} classes={{ root: 'profile__about-card-grid' }}>
       <About />
     </Grid>
   </Grid>

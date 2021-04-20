@@ -31,5 +31,12 @@
 .info__card__media {
   width: 100px;
   height: 100px;
-  content: '';
+}
+
+/*--- Media Queries --*/
+
+@media (max-width: 600px) {
+  .info__card__media {
+    display: none !important;
+  }
 }
