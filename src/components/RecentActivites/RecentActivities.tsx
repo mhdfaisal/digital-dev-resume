@@ -26,7 +26,7 @@ const RecentActivities: React.FC = () => {
   const repositories = user?.repositories ?? {};
   const { nodes = [] } = repositories;
   // state variable and method for controlled accordion
-  const [expanded, setExpanded] = React.useState<string | false>('panel1');
+  const [expanded, setExpanded] = React.useState<string | false>(false);
 
   // handler for accordion expand state change
   const handleChange = (panel: string) => (
