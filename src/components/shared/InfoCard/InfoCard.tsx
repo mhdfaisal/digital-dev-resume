@@ -42,7 +42,6 @@ const InfoCard: React.FC<IInfoCard> = (props) => {
             <Typography
               variant="body1"
               classes={{ body1: 'info__card__title' }}
-              color="primary"
             >
               {title}
             </Typography>

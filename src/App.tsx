@@ -34,7 +34,7 @@ const App: React.FC = () => {
     palette: {
       type: themeMode,
       primary: {
-        main: themeMode === 'light' ? '#bd5d38' : '#000',
+        main: themeMode === 'light' ? '#0a558d' : '#000',
       },
     },
   });
