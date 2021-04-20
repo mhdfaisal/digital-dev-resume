@@ -28,14 +28,12 @@
   "scripts": {
     "predeploy": "npm run build",
     "start": "node fetch-github-data.js && react-scripts start",
-    "dev": "react-scripts start",
     "build": "node fetch-github-data.js && react-scripts build",
     "deploy": "gh-pages -b master -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src --color",
-    "format": "prettier --write 'src/**/*.{ts,tsx,scss,css,json}'",
-    "predev": "node fetch-github-data.js"
+    "format": "prettier --write 'src/**/*.{ts,tsx,scss,css,json}'"
   },
   "eslintConfig": {
     "extends": [
