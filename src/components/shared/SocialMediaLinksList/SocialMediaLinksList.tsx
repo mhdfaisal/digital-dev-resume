@@ -9,6 +9,7 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 
 import { socialMediaLinks } from '../../../assets/portfolio-info';
+import { openInNewTab } from '../../../utils/helpers';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,7 +23,7 @@ const IconButtons: React.FC = () => {
   const classes = useStyles();
   const {
     github,
-    email,
+    mailToLink,
     linkedIn,
     twitter,
     facebook,
@@ -32,32 +33,50 @@ const IconButtons: React.FC = () => {
   return (
     <div className={classes.root}>
       {github && (
-        <IconButton aria-label="github-link" color="primary">
+        <IconButton
+          aria-label="github-link"
+          onClick={() => openInNewTab(github)}
+        >
           <GitHubIcon />
         </IconButton>
       )}
-      {email && (
-        <IconButton aria-label="email-link" color="primary">
+      {mailToLink && (
+        <IconButton
+          aria-label="email-link"
+          onClick={() => openInNewTab(mailToLink)}
+        >
           <EmailIcon />
         </IconButton>
       )}
       {linkedIn && (
-        <IconButton aria-label="linkedIn-link" color="primary">
+        <IconButton
+          aria-label="linkedIn-link"
+          onClick={() => openInNewTab(linkedIn)}
+        >
           <LinkedInIcon />
         </IconButton>
       )}
       {twitter && (
-        <IconButton aria-label="twitter-link" color="primary">
+        <IconButton
+          aria-label="twitter-link"
+          onClick={() => openInNewTab(twitter)}
+        >
           <TwitterIcon />
         </IconButton>
       )}
       {facebook && (
-        <IconButton aria-label="facebook-link" color="primary">
+        <IconButton
+          aria-label="facebook-link"
+          onClick={() => openInNewTab(facebook)}
+        >
           <FacebookIcon />
         </IconButton>
       )}
       {instagram && (
-        <IconButton aria-label="instagram-link" color="primary">
+        <IconButton
+          aria-label="instagram-link"
+          onClick={() => openInNewTab(instagram)}
+        >
           <InstagramIcon />
         </IconButton>
       )}
