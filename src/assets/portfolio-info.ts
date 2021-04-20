@@ -16,8 +16,9 @@ const bioData: IBioData = {
     'In my recent employment organization, I faced my most challenging job of creating third party embed JavaScript widgets which were intended to be configured by the clients using our dashboard and to be placed on their websites for reputation management. I was solely responsible for the accomplishment of this task, starting from scratch. It was a new thing for me since in the past I had already created some static JavaScript widgets but this time they were highly dynamic and with hell lot of configurations and also the challenge of making them appear the same on every client systems. To overcome this challenge I did some research by going through online resources and books (Third party Js etc) and finally reverse engineering the widgets of some competitors who were already doing something that we were trying to achieve. Finally, I was able to code the widget bootstrap script and also the widgets themselves and made them highly configurable by creating a widget management module inside the dashboard. Those widgets are still live and working and loved by the clients for displaying their reputations on their platforms.',
   bioTagLine:
     "Whether you're looking to hire an eager self-starter or build your network, I'd love to hear your story.",
-  resumeDownloadLink: '',
-  meetingSchedulerLink: '',
+  resumeDownloadLink:
+    'https://drive.google.com/file/d/1QIByfTKJPRzXU6svhDJHARM0UjecSfxw/view?usp=sharing',
+  meetingSchedulerLink: 'https://calendly.com/fmohd195/30min',
 };
 
 // skill tags displayed in Bio section
