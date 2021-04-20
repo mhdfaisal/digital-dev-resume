@@ -33,7 +33,6 @@ const RepoCardSummary: React.FC<IRepoCardSummary> = (props) => {
     forkCount,
     stars,
     diskUsage,
-    pushedAt,
     latestCommitObj,
   } = repoSummary;
 
