@@ -38,7 +38,7 @@ const NavBar: React.FC = () => {
   return (
     <nav className="navbar__container">
       <AppBar position="static">
-        <Toolbar>
+        <Toolbar id="back-to-top-anchor">
           <Grid container spacing={3}>
             <Grid
               item

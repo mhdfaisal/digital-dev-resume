@@ -1,9 +1,11 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import Fab from '@material-ui/core/Fab';
+import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 
 import SocialMediaLinksList from '../shared/SocialMediaLinksList/SocialMediaLinksList';
-
+import ScrollTop from '../shared/ScrollTop/ScrollTop';
 import './Footer.css';
 
 /**
@@ -24,6 +26,11 @@ const Footer: React.FC = () => (
         </Grid>
       </Grid>
     </Grid>
+    <ScrollTop elementId="back-to-top-anchor">
+      <Fab color="secondary" size="small" aria-label="scroll back to top">
+        <KeyboardArrowUpIcon />
+      </Fab>
+    </ScrollTop>
   </footer>
 );
 
