@@ -58,7 +58,9 @@ const Home: React.FC = () => {
         error: '',
         user: {},
       }));
-      const result = await axios.get('/github-profile.json');
+      const result = await axios.get(
+        `${process.env.PUBLIC_URL}/github-profile.json`
+      );
       const user = result?.data?.data?.user ?? {};
       // set the user data inside state
       setGithubProfileData((prevGithubProfileData) => ({

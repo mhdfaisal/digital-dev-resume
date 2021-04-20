@@ -114,7 +114,7 @@ const workExperiences: WorkExperiences = [
   {
     role: 'Part-time Online Web Dev Instructor',
     companyName: 'TeacherOn',
-    companyLogo: '/images/teacheron.png',
+    companyLogo: `${process.env.PUBLIC_URL}/images/teacheron.png`,
     duration: 'Oct 2017 - July 2019',
     description:
       'Taught people how to code in an efficient way. Helped non-IT background people in learning computer programming and web development. Overall it was a very great experience teaching people belonging to different parts of the world and of different age groups',
@@ -123,7 +123,7 @@ const workExperiences: WorkExperiences = [
   {
     role: 'Guest Instructor (One day Workshop)',
     companyName: 'Coding Stallions',
-    companyLogo: '/images/e-developers.png',
+    companyLogo: `${process.env.PUBLIC_URL}/images/e-developers.png`,
     duration: '27, July 2018',
     description:
       'A no-fee one day workshop on web development open to the public and sponsored by Coding Stallions.',
@@ -135,21 +135,21 @@ const workExperiences: WorkExperiences = [
 const educationInfo: EducationInfo = [
   {
     collegeName: `CATHEDRAL SR. SEC. SCHOOL`,
-    collegeLogo: '/images/cathedral-logo.png',
+    collegeLogo: `${process.env.PUBLIC_URL}/images/cathedral-logo.png`,
     duration: '1999 - 2013',
     description: 'INTERMEDIATE',
     descriptionBullets: false,
   },
   {
     collegeName: 'MCRP UNIVERSITY, BHOPAL',
-    collegeLogo: '/images/mcrp-university.png',
+    collegeLogo: `${process.env.PUBLIC_URL}/images/mcrp-university.png`,
     duration: '2014 - 2017',
     description: 'BACHELOR OF COMPUTER APPLICATIONS (BCA)',
     descriptionBullets: false,
   },
   {
     collegeName: 'INTEGRAL UNIVERSITY DDE, LUCKNOW',
-    collegeLogo: '/images/integral-uni.png',
+    collegeLogo: `${process.env.PUBLIC_URL}/images/integral-uni.png`,
 
     duration: '2017 - 2019',
     description: 'MASTER OF COMPUTER APPLICATIONS (MCA)',
