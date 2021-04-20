@@ -13,7 +13,8 @@ require('dotenv').config();
 (() => {
   // credentials from env file
   const GITHUB_TOKEN = process.env.REACT_APP_GITHUB_TOKEN;
-  const { GITHUB_USERNAME, GITHUB_GRAPHQL_API_URL } = process.env;
+  const { GITHUB_USERNAME } = process.env;
+  const GITHUB_GRAPHQL_API_URL = 'https://api.github.com/graphql';
 
   if (GITHUB_USERNAME === undefined) {
     throw new Error('GITHUB_USERNAME env variable not found');

@@ -56,7 +56,6 @@ Generate a Github personal access token by following these [instructions](https:
 // .env
 REACT_APP_GITHUB_TOKEN = "YOUR GITHUB TOKEN HERE"
 GITHUB_USERNAME = "YOUR GITHUB USERNAME HERE"
-GITHUB_GRAPHQL_API_URL = "GITHUB GRAPHQL API URL"
 ```
 
 ## Change Static information
