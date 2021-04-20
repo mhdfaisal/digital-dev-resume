@@ -5,6 +5,8 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkIcon from '@material-ui/icons/Link';
 import emoji from 'react-easy-emoji';
 import { v1 as uuidv1 } from 'uuid';
 
@@ -87,11 +89,21 @@ const RepoCard: React.FC<IRepoCard> = (props) => {
         </Grid>
       </CardContent>
       <CardActions classes={{ root: 'repo-card-actions' }}>
-        <Button size="small" onClick={() => openInNewTab(url)}>
+        <Button
+          size="small"
+          variant="outlined"
+          onClick={() => openInNewTab(url)}
+          startIcon={<GitHubIcon />}
+        >
           Github
         </Button>
         {homepageUrl && (
-          <Button size="small" onClick={() => openInNewTab(homepageUrl)}>
+          <Button
+            size="small"
+            variant="outlined"
+            startIcon={<LinkIcon />}
+            onClick={() => openInNewTab(homepageUrl)}
+          >
             Live Demo
           </Button>
         )}
