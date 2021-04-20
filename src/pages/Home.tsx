@@ -11,15 +11,23 @@ import RecentActivites from '../components/RecentActivites/RecentActivities';
 import Footer from '../components/Footer/Footer';
 import GithubProfileContext from '../context/GithubProfileContext';
 
+import { HOME_CONTAINER } from '../utils/constants/colors-codes';
+import { THEME_MODES } from '../utils/constants/theme-modes';
+
 /**
  * Link a style sheet to the Home component using the hook pattern.
  */
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
+    borderRadius: 0,
     flexDirection: 'column',
     alignSelf: 'stretch',
     height: '100%',
+    backgroundColor:
+      theme.palette.type === THEME_MODES.dark
+        ? HOME_CONTAINER.background.dark
+        : HOME_CONTAINER.background.light,
   },
 }));
 

@@ -4,6 +4,8 @@ import Paper from '@material-ui/core/Paper';
 
 import Home from './pages/Home';
 import { ThemeContext, ThemeModeType } from './context/ThemeContext';
+import { PALETTE_PRIMARY } from './utils/constants/colors-codes';
+import { THEME_MODES } from './utils/constants/theme-modes';
 
 /**
  * The root component / container of the application
@@ -11,7 +13,8 @@ import { ThemeContext, ThemeModeType } from './context/ThemeContext';
 const App: React.FC = () => {
   // check for existing mode in local storage
   const existingMode =
-    window.localStorage.getItem('digital-dev-resume-v-mode') || 'light';
+    window.localStorage.getItem('digital-dev-resume-v-mode') ||
+    THEME_MODES.light;
   // state for light/dark mode toggle
   const [themeMode, setThemeMode] = useState<ThemeModeType>(
     existingMode as ThemeModeType
@@ -22,9 +25,15 @@ const App: React.FC = () => {
    */
   const toggleThemeMode = () => {
     setThemeMode((prevMode) => {
-      const newMode = prevMode === 'dark' ? 'light' : 'dark';
+      const newMode =
+        prevMode === THEME_MODES.dark
+          ? (THEME_MODES.light as ThemeModeType)
+          : (THEME_MODES.dark as ThemeModeType);
       // persist mode in local storage
-      window.localStorage.setItem('digital-dev-resume-v-mode', newMode);
+      window.localStorage.setItem(
+        'digital-dev-resume-v-mode',
+        newMode as string
+      );
       return newMode;
     });
   };
@@ -34,10 +43,14 @@ const App: React.FC = () => {
     palette: {
       type: themeMode,
       primary: {
-        main: themeMode === 'light' ? '#0a558d' : '#000',
+        main:
+          themeMode === THEME_MODES.light
+            ? PALETTE_PRIMARY.light
+            : PALETTE_PRIMARY.dark,
       },
     },
   });
+
   return (
     <ThemeProvider theme={theme}>
       <ThemeContext.Provider value={{ themeMode, toggleThemeMode }}>
