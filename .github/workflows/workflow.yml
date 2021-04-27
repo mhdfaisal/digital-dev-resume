@@ -1,15 +1,15 @@
-name: Deploy to gh-pages on push to main and on every Monday
+name: Deploy to gh-pages on push to main and on every Tuesday
 env:
   CI: false
   GITHUB_USERNAME: ${{ github.repository_owner }}
   REACT_APP_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Use the generated personal access token and add it to repository secrets with the name OPEN_SOURCE_TOKEN
 
 on:
+  schedule:
+    - cron: '0 23 * * 2'
   push:
     branches:
       - 'main'
-    schedule:
-      - cron: '0 12 * * 1'
 
 jobs:
   build:
