@@ -5,16 +5,16 @@
     "main.js.map": "/digital-dev-resume/static/js/main.33b22379.chunk.js.map",
     "runtime-main.js": "/digital-dev-resume/static/js/runtime-main.16c2d070.js",
     "runtime-main.js.map": "/digital-dev-resume/static/js/runtime-main.16c2d070.js.map",
-    "static/js/2.c61941ef.chunk.js": "/digital-dev-resume/static/js/2.c61941ef.chunk.js",
-    "static/js/2.c61941ef.chunk.js.map": "/digital-dev-resume/static/js/2.c61941ef.chunk.js.map",
+    "static/js/2.ac628685.chunk.js": "/digital-dev-resume/static/js/2.ac628685.chunk.js",
+    "static/js/2.ac628685.chunk.js.map": "/digital-dev-resume/static/js/2.ac628685.chunk.js.map",
     "index.html": "/digital-dev-resume/index.html",
     "static/css/main.03a6edb0.chunk.css.map": "/digital-dev-resume/static/css/main.03a6edb0.chunk.css.map",
-    "static/js/2.c61941ef.chunk.js.LICENSE.txt": "/digital-dev-resume/static/js/2.c61941ef.chunk.js.LICENSE.txt",
+    "static/js/2.ac628685.chunk.js.LICENSE.txt": "/digital-dev-resume/static/js/2.ac628685.chunk.js.LICENSE.txt",
     "static/js/main.33b22379.chunk.js.LICENSE.txt": "/digital-dev-resume/static/js/main.33b22379.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.16c2d070.js",
-    "static/js/2.c61941ef.chunk.js",
+    "static/js/2.ac628685.chunk.js",
     "static/css/main.03a6edb0.chunk.css",
     "static/js/main.33b22379.chunk.js"
   ]
