@@ -17,7 +17,7 @@ const bioData: IBioData = {
   bioTagLine:
     "Whether you're looking to hire an eager self-starter or build your network, I'd love to hear your story.",
   resumeDownloadLink:
-    'https://drive.google.com/file/d/1QIByfTKJPRzXU6svhDJHARM0UjecSfxw/view?usp=sharing',
+    'https://drive.google.com/file/d/11DTj5WnaARsIIai-fK4zHS9cMf0lDxPl/view?usp=sharing',
   meetingSchedulerLink: 'https://calendly.com/fmohd195/30min',
 };
 
@@ -47,6 +47,36 @@ const skillTags: SkillTags = [
     backgroundColor: '',
     fontColor: '',
   },
+  {
+    id: 20,
+    name: 'Schema Design',
+    backgroundColor: '#E863AB',
+    fontColor: '#fff',
+  },
+  {
+    id: 21,
+    name: 'AWS',
+    backgroundColor: '#DF4F4F',
+    fontColor: '#fff',
+  },
+  {
+    id: 22,
+    name: 'Deployment',
+    backgroundColor: '',
+    fontColor: '',
+  },
+  {
+    id: 23,
+    name: 'PubSub',
+    backgroundColor: '',
+    fontColor: '',
+  },
+  {
+    id: 24,
+    name: 'ORMs',
+    backgroundColor: '#68A063',
+    fontColor: '#fff',
+  },
 ];
 
 // social media links
@@ -67,15 +97,36 @@ const socialMediaLinks: ISocialMediaLinks = {
 // work experience section
 const workExperiences: WorkExperiences = [
   {
-    role: 'Remote Front End Developer (React Js)',
+    role: 'Sr. Fullstack Engineer (Remote)',
+    companyName: 'Ohceans Pte Ltd, Singapore',
+    companyLogo: `${process.env.PUBLIC_URL}/images/ohceans.png`,
+    duration: 'August 2020 - Present',
+    description:
+      'Leading the development of products that automate the processes in the shipping industry to optimise port call operations, automate digital crew certification verifications, behavior based safety inspection softwares, remote survey and audit tools and simplifying vessel chartering for both hirers and vessel providers by building and delivering innovative and effective solutions.',
+    descriptionBullets: [
+      'Simplified shipment business problems using modern technologies',
+      'Developed a reactive Web Application using Meteor Js for shipment port call optimizations',
+      'Reduced numerous man-hours spent manually updating shipment information',
+      'Optimized Meteor mongo subscriptions for efficient querying and reduced size of mini mongo at client level',
+      ' Lead the development of a product to automate crew certificate verification. Replaced the time consuming mechanical checking method with and automated solution that confirms the authenticity of each certificate against National Authorities’ databases line by line and generated an automated report with highest accuracy rate. The reports generated bear the company letterhead and can be downloaded in the pdf format. Technologies used - (Node.js, MongoDB, TagUI, Puppeteer, React.js, Redux).',
+      'Lead the development of the Behavior Based Safety Software for the shipping industry. Enabled crew members to to report observations, unsafe and at-risk behaviors and conditions with simple to use software, available on any device. Adapted BBS checklists to align with each workers job role, site and tasks. Connected the field to the boardroom to truly understand the underlying causes of reported safety observations from crew members. Automated processes that are manual, repetitive or require consistent follow-ups or closeouts.',
+      'Lead the design, development and deployment of a remote audit progressive web application for crews and shore managers. Allowed creation of dynamic audit forms, supported caching and offline submissions of audit forms using background syncs. Facilitated quick approval, rejections and closeouts of the audit submissions.',
+      'Currently managing a team of 4 and leading the development of a Vessel Chartering application that supports instant vessel matching from a central pool of vessel providers for hiring by cargo providers.',
+      'Tools: JavaScript, TypeScript, React Js, React Query, Next Js, Material UI, Node Js, Docker, Amazon Web Services (AWS), Continuous Integration and Continuous Delivery (CI/CD), Deployment, Schema Design, Pub Sub, Meteor Js, WebSocket, GraphQL, GraphQL Subscriptions, Redis, S3, Testing, Jest, Enzyme',
+    ],
+  },
+  {
+    role: 'Software Engineer Frontend (Remote)',
     companyName: 'TrustSearch Ltd, Riga, Latvia',
     companyLogo: `${process.env.PUBLIC_URL}/images/trustsearch-logo.png`,
-    duration: 'July 2019 - Present',
+    duration: 'July 2019 - July 2020',
     description:
-      'Develop an application where - Internet users check online reputation to websites, but website owners build trustworthiness online',
+      'Develop an application where - Internet users check online reputation of websites, but website owners build trustworthiness online.',
     descriptionBullets: [
       'Building architecture for UI.',
       'Creating and documenting app-wide design system.',
+      'Automating the collection of customer reviews.',
+      'Creation of user survey templates.',
       'Promote the usage of React hooks for development.',
       'Development of Server Side Rendered React App using Next JS framework.',
       'Development of embedded third party JavaScript widgets',
@@ -92,23 +143,17 @@ const workExperiences: WorkExperiences = [
   },
   {
     role: 'Freelance Web Developer',
-    companyName: 'E-Developers World, India',
+    companyName: 'Freelance (Part-time)',
     companyLogo: `${process.env.PUBLIC_URL}/images/e-developers.png`,
-    duration: 'July 2016 - July 2019',
+    duration: 'Jun 2017 - July 2019',
     description:
-      'Being a developer at a service based company, experienced working on multiple domains including shipping, finance, e-commerce, etc. Lead the development of a product that automated the processes in the shipping industry to optimise port call operations.',
+      'Being a freelance developer got to work with different clients and experienced working on multiple domains including real-estate, e-commerce, etc.',
     descriptionBullets: [
-      'Simplified shipment business problems using modern technologies',
-      'Developed a reactive Web Application using Meteor Js for shipment port call optimizations',
-      'Reduced numerous man-hours spent manually updating shipment information',
-      'Developed endpoints for sending auto emails and setting up crons',
-      'Developed endpoints and UI for Notifications - snooze and reminder functionalities',
-      'Developed UI and RPCs for generating shipments reports',
-      'Designed and developed dashboard views for different users',
-      'Optimized Meteor mongo subscriptions for efficient querying and reduced size of mini mongo at client level',
+      'Offered complete online services, from creating web wireframes to developing and pushing them to production.',
+      ' Completed full redesigns of existing websites to improve navigation, enhance visuals and strengthen search engine rankings.',
       'Created eye catching and functional digital design concepts across various platforms to strengthen client brand and identity.',
-      'Tested websites and performed troubleshooting prior to deployment.',
-      'Completed full redesigns of existing websites to improve navigation, enhance visuals and strengthen search engine rankings.',
+      'Produced UI / UX Designs in Figma.',
+      'Tools: HTML, CSS, JavaScript, jQuery, Core PHP, Material Design, Bootstrap',
     ],
   },
   {
