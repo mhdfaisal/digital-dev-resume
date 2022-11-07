@@ -29,7 +29,7 @@ require('dotenv').config();
   const data = JSON.stringify({
     query: `
 {
-user(login: "mhdfaisal") {
+user(login: "${GITHUB_USERNAME}") {
     name
     bio
     url
