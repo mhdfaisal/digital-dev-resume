@@ -18,7 +18,7 @@ Just change the data for fields in `src/assets/portfolio-info.ts` to get your ow
 ✔️ Education & Work Experience\
 ✔️ Pinned Repositories (Repos pinned by you in your Github account)\
 ✔️ Recently Active Repositories (Repos recently being committed upon)\
-✔️ Footer\
+✔️ Footer
 
 ## Getting Started
 
