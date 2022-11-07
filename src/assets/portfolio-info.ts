@@ -30,7 +30,7 @@ const skillTags: SkillTags = [
   { id: 5, name: 'Redux', backgroundColor: '#785ABC', fontColor: '#fff' },
   { id: 6, name: 'Next Js', backgroundColor: '', fontColor: '' },
   { id: 7, name: 'Meteor Js', backgroundColor: '#DF4F4F', fontColor: '#fff' },
-  { id: 8, name: 'Web Sockets', backgroundColor: '', fontColor: '' },
+  { id: 8, name: 'Websocket', backgroundColor: '', fontColor: '' },
   { id: 9, name: 'Node Js', backgroundColor: '#68A063', fontColor: '#fff' },
   { id: 10, name: 'Express', backgroundColor: '#8CC84B', fontColor: '#fff' },
   { id: 11, name: 'MongoDB', backgroundColor: '', fontColor: '' },
