@@ -8,7 +8,7 @@ import { RepositoryTopicsNode } from '../context/GithubProfileContext';
  * @returns topicsWithColors - an array of type { name: string; id: number }.[]
  */
 export const getRepoTopicsArr = (
-  repositoryTopicsNodes: RepositoryTopicsNode[]
+  repositoryTopicsNodes: Partial<RepositoryTopicsNode>[]
 ) => {
   const topicsWithColors: { name: string; id: number }[] = [];
   repositoryTopicsNodes.forEach((topic, index) => {
