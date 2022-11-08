@@ -16,7 +16,7 @@ interface IRepoCardSummary {
     stars: number;
     diskUsage: number;
     pushedAt: string;
-    latestCommitObj: RefNode;
+    latestCommitObj: Partial<RefNode>;
   };
 }
 
@@ -25,7 +25,7 @@ interface IRepoCardSummary {
  * @props repoSummary - object holding the info about a repository such as name, description, etc.
  * For keys inside repSummary refer - IRepoCardSummary
  */
-const RepoCardSummary: React.FC<IRepoCardSummary> = (props) => {
+const RepoCardSummary: React.FC<Partial<IRepoCardSummary>> = (props) => {
   const { repoSummary } = props;
   const {
     primaryLanguageColor,
@@ -34,9 +34,9 @@ const RepoCardSummary: React.FC<IRepoCardSummary> = (props) => {
     stars,
     diskUsage,
     latestCommitObj,
-  } = repoSummary;
+  } = repoSummary ?? {};
 
-  const { name = '', target = {} } = latestCommitObj ?? {};
+  const { name = '', target } = latestCommitObj ?? {};
   const totalCount = target?.history?.totalCount ?? 0;
   const messageHeadline = target?.messageHeadline ?? '';
   const pushedDate = target?.pushedDate ?? '';
