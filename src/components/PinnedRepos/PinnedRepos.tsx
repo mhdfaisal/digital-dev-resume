@@ -23,18 +23,16 @@ import './PinnedRepos.css';
  */
 const PinnedRepos: React.FC = () => {
   const { isLoading, error, user } = useContext(GithubProfileContext);
-  const pinnedItems = user?.pinnedItems ?? {};
-  const { edges = [] } = pinnedItems;
+  const pinnedItems = user?.pinnedItems;
+  const { edges = [] } = pinnedItems ?? {};
   // state variable and method for controlled accordion
   const [expanded, setExpanded] = React.useState<string | false>('panel1');
 
   // handler for accordion expand state change
-  const handleChange = (panel: string) => (
-    event: React.ChangeEvent<{}>,
-    newExpanded: boolean
-  ) => {
-    setExpanded(newExpanded ? panel : false);
-  };
+  const handleChange =
+    (panel: string) => (event: React.ChangeEvent<{}>, newExpanded: boolean) => {
+      setExpanded(newExpanded ? panel : false);
+    };
 
   return (
     <Grid container classes={{ root: 'pinned__repos' }}>
@@ -70,14 +68,16 @@ const PinnedRepos: React.FC = () => {
                       classes={{ root: 'pinned__repos-card-grid' }}
                     >
                       <RepoCard
-                        repoDetails={{ ...(edge?.node as PinnedItemsNodeType) }}
+                        repoDetails={{
+                          ...(edge?.node as Partial<PinnedItemsNodeType>),
+                        }}
                       />
                     </Grid>
                   ))}
                 {!isLoading && error && (
                   <ErrorMessage oneLiner={errorMsgs.PINNED_REPOS_ERROR_MSG} />
                 )}
-                <LoadingProgress isLoading={isLoading} source="GitHub" />
+                <LoadingProgress isLoading={!!isLoading} source="GitHub" />
               </Grid>
             </Grid>
           </AccordionDetails>
