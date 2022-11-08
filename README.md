@@ -44,6 +44,8 @@ $ yarn install
 $ yarn start
 ```
 
+Note: Change the homepage URL in the package.json file to yourusername.github.io
+
 ## Linking Digital Dev Resume to Github
 
 Generate a Github personal access token by following these [instructions](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) (no need to select any scopes for this token).
