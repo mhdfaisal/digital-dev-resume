@@ -9,7 +9,7 @@ import './ShowMoreAccordion.css';
 
 interface IShowMoreAccordion {
   summary: string;
-  children?: React.ReactNode;
+  children: React.ReactNode;
 }
 
 /**
@@ -17,7 +17,7 @@ interface IShowMoreAccordion {
  * @prop summary - The summary to display on the accordion.
  * @prop children - React node to be displayed under accordion details
  */
-const ShowMoreAccordion: React.FC<IShowMoreAccordion> = (props) => {
+const ShowMoreAccordion: React.FC<Partial<IShowMoreAccordion>> = (props) => {
   const { summary, children } = props;
   return (
     <Accordion classes={{ root: 'show__more-accordion' }}>
