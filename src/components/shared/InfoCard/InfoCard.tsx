@@ -9,12 +9,12 @@ import './InfoCard.css';
 import EmojiList from '../EmojiList/EmojiList';
 
 interface IInfoCard {
-  title?: string;
-  subtitle?: string;
-  metaData?: string;
-  description?: string;
-  descriptionBullets?: string[] | false;
-  imageURL?: string | false;
+  title: string;
+  subtitle: string;
+  metaData: string;
+  description: string;
+  descriptionBullets: string[] | false;
+  imageURL: string | false;
 }
 
 /**
@@ -25,7 +25,7 @@ interface IInfoCard {
  * @prop description - the description for the info card.
  * @prop descriptionBullets - the description bullet points for the info card.
  */
-const InfoCard: React.FC<IInfoCard> = (props) => {
+const InfoCard: React.FC<Partial<IInfoCard>> = (props) => {
   const {
     title,
     subtitle,
