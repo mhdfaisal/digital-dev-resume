@@ -3,8 +3,8 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
 interface IErrorMessage {
-  children?: React.ReactNode;
-  oneLiner?: string;
+  children: React.ReactNode;
+  oneLiner: string;
 }
 
 /**
@@ -12,7 +12,7 @@ interface IErrorMessage {
  * @props children - React node
  * @props oneLiner - a single line error msg to be displayed
  */
-const ErrorMessage: React.FC<IErrorMessage> = (props) => {
+const ErrorMessage: React.FC<Partial<IErrorMessage>> = (props) => {
   const { children, oneLiner = '' } = props;
   return (
     <Grid container>
