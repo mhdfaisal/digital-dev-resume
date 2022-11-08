@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
-import axios from 'axios';
+import axios, { AxiosError } from 'axios';
 
 import Header from '../components/Header/Header';
 import Profile from '../components/Profile/Profile';
@@ -70,12 +70,13 @@ const Home: React.FC = () => {
         user: { ...user },
       }));
     } catch (err) {
+      const errors = err as Error | AxiosError;
       console.log(err);
       // set error message inside the state
       setGithubProfileData((prevGithubProfileData) => ({
         ...prevGithubProfileData,
         isLoading: false,
-        error: err?.message ?? '',
+        error: errors?.message ?? '',
         user: {},
       }));
     }
