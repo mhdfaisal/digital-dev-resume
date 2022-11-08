@@ -24,8 +24,8 @@ export interface IBioData {
 export interface ISkillTag {
   id: number;
   name: string;
-  backgroundColor?: string;
-  fontColor?: string;
+  backgroundColor: string;
+  fontColor: string;
 }
 
 /**
@@ -69,10 +69,10 @@ export interface ISocialMediaLinks {
 export interface IWorkExperience {
   role: string;
   companyName: string;
-  companyLogo?: string;
+  companyLogo: string;
   duration: string;
   description: string;
-  descriptionBullets?: string[] | false;
+  descriptionBullets: string[] | false;
 }
 
 /**
