@@ -9,14 +9,14 @@ import { ISkillTag } from '../../../assets/portfolio-info.types';
  * @extends ISkillTag interface for skill tag object
  */
 interface ISkillTagProps extends ISkillTag {
-  size?: 'small' | 'medium' | undefined;
+  size: 'small' | 'medium' | undefined;
 }
 
 /**
  * Link a style sheet to the SkillTag component using the hook pattern.
  */
 const useStyles = makeStyles({
-  root: (props: React.PropsWithChildren<ISkillTagProps>) => ({
+  root: (props: React.PropsWithChildren<Partial<ISkillTagProps>>) => ({
     color: props?.fontColor ?? 'primary',
     backgroundColor: props.backgroundColor ?? 'secondary',
     margin: '0 0.2rem 0.2rem ',
@@ -31,7 +31,7 @@ const useStyles = makeStyles({
  * @props fontColor - the font color of the tag label.
  * @props backgroundColor - the background color of the tag.
  */
-const SkillTag: React.FC<ISkillTagProps> = (props) => {
+const SkillTag: React.FC<Partial<ISkillTagProps>> = (props) => {
   const classes = useStyles(props);
   const { size = 'small', name } = props;
   return <Chip size={size} label={name} className={classes.root} />;
