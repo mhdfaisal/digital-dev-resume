@@ -23,18 +23,16 @@ import './RecentActivities.css';
  */
 const RecentActivities: React.FC = () => {
   const { isLoading, error, user } = useContext(GithubProfileContext);
-  const repositories = user?.repositories ?? {};
-  const { nodes = [] } = repositories;
+  const repositories = user?.repositories;
+  const { nodes = [] } = repositories ?? {};
   // state variable and method for controlled accordion
   const [expanded, setExpanded] = React.useState<string | false>(false);
 
   // handler for accordion expand state change
-  const handleChange = (panel: string) => (
-    event: React.ChangeEvent<{}>,
-    newExpanded: boolean
-  ) => {
-    setExpanded(newExpanded ? panel : false);
-  };
+  const handleChange =
+    (panel: string) => (event: React.ChangeEvent<{}>, newExpanded: boolean) => {
+      setExpanded(newExpanded ? panel : false);
+    };
 
   return (
     <Grid container classes={{ root: 'recent__activities' }}>
@@ -82,7 +80,7 @@ const RecentActivities: React.FC = () => {
                 {!isLoading && error && (
                   <ErrorMessage oneLiner={errorMsgs.RECENT_REPOS_ERROR_MSG} />
                 )}
-                <LoadingProgress isLoading={isLoading} source="GitHub" />
+                <LoadingProgress isLoading={!!isLoading} source="GitHub" />
               </Grid>
             </Grid>
           </AccordionDetails>
