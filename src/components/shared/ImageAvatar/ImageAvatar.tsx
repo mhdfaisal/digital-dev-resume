@@ -6,8 +6,8 @@ import Avatar from '@material-ui/core/Avatar';
  * Interface for ImageAvatar component props
  */
 interface IImageAvatarProps {
-  alt?: string;
-  src?: string;
+  alt: string;
+  src: string;
 }
 
 /**
@@ -25,7 +25,7 @@ const useStyles = makeStyles(() => ({
  * @props src - the source URL of the image.
  * @props alt - the alternate text to be displayed.
  */
-const ImageAvatar: React.FC<IImageAvatarProps> = (props) => {
+const ImageAvatar: React.FC<Partial<IImageAvatarProps>> = (props) => {
   const classes = useStyles();
   const { alt = '', src = '' } = props;
   return <Avatar alt={alt} src={src} className={classes.large} />;
