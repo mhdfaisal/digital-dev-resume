@@ -19,14 +19,14 @@ import { getRepoTopicsArr, openInNewTab } from '../../../utils/helpers';
 import './RepoCard.css';
 
 interface IRepoCard {
-  repoDetails: PinnedItemsNodeType;
+  repoDetails: Partial<PinnedItemsNodeType>;
 }
 
 /**
  * Card to display github repo info
  * @prop repoDetails - an object confirming to interface NodeType
  */
-const RepoCard: React.FC<IRepoCard> = (props) => {
+const RepoCard: React.FC<Partial<IRepoCard>> = (props) => {
   const { repoDetails } = props;
   const name = repoDetails?.name ?? '';
   const description = repoDetails?.description ?? '';
@@ -34,14 +34,14 @@ const RepoCard: React.FC<IRepoCard> = (props) => {
   const diskUsage = repoDetails?.diskUsage ?? 0;
   const forkCount = repoDetails?.forkCount ?? 0;
   const homepageUrl = repoDetails?.homepageUrl ?? '';
-  const primaryLanguage = repoDetails?.primaryLanguage ?? {};
+  const primaryLanguage = repoDetails?.primaryLanguage;
   const primaryLanguageColor = primaryLanguage?.color ?? '';
   const primaryLanguageName = primaryLanguage?.name ?? '';
   const pushedAt = repoDetails?.pushedAt ?? '';
-  const repoDetailRef = repoDetails?.refs ?? {};
+  const repoDetailRef = repoDetails?.refs;
   const repoDetailsRefNodes = repoDetailRef?.nodes ?? [];
   const latestCommitObj = repoDetailsRefNodes[0];
-  const stargazers = repoDetails?.stargazers ?? {};
+  const stargazers = repoDetails?.stargazers;
   const url = repoDetails?.url ?? '';
 
   return (
