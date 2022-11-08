@@ -17,10 +17,10 @@ import './GithubVCard.css';
  */
 const GithubVCard: React.FC = () => {
   const { isLoading, error, user } = useContext(GithubProfileContext);
-  const status = user?.status ?? {};
+  const status = user?.status;
   const country = user?.location ?? '';
   const company = user?.company ?? '';
-  const { emojiHTML, message } = status;
+  const { emojiHTML = '', message = '' } = status ?? {};
   const emojiHTMLStr: string = emojiHTML as string;
 
   return (
@@ -57,7 +57,7 @@ const GithubVCard: React.FC = () => {
       {!isLoading && error && (
         <ErrorMessage oneLiner={errorMsgs.PERSONAL_INFO_CARD_ERROR_MSG} />
       )}
-      <LoadingProgress isLoading={isLoading} source="GitHub" />
+      <LoadingProgress isLoading={Boolean(isLoading)} source="GitHub" />
     </>
   );
 };
