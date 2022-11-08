@@ -5,7 +5,7 @@ import IconButton from '@material-ui/core/IconButton';
 interface ITooltipIconButton {
   children: React.ReactNode;
   tooltipTitle: string;
-  onClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+  onClick: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 
 /**
@@ -14,8 +14,8 @@ interface ITooltipIconButton {
  * @prop tooltipTitle - The tooltip text to show.
  * @prop onClick - IconButton click event handler
  */
-const ToolTipIconButton: React.FC<ITooltipIconButton> = (props) => {
-  const { children, tooltipTitle, onClick } = props;
+const ToolTipIconButton: React.FC<Partial<ITooltipIconButton>> = (props) => {
+  const { children, tooltipTitle = '', onClick } = props;
   return (
     <Tooltip title={tooltipTitle}>
       <IconButton onClick={onClick}>{children}</IconButton>
